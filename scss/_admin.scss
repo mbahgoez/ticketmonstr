@@ -1,0 +1,450 @@
+#admin {
+    * {
+        font-family: $roboto;
+    }
+    body {
+        background: #edf0f5;
+    }
+    .container {
+        width: 100%;
+        @include clearfix;
+    }
+    nav {
+        float: left;
+        width: 20%;
+        height: 100vh;
+        background: #fff;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        position: fixed;
+        div.header-bar {
+            height: 73px;
+            background: $main;
+            padding-left: 20px;
+            h1 {
+                font-weight: lighter;
+                line-height: 74px;
+                color: #fff;
+                font-weight: 500;
+                i {
+                    margin-right: 20px;
+                }
+            }
+        }
+        div.user {
+            padding: 20px 20px;
+            border-bottom: 1px solid #eee;
+            h3 {
+                text-transform: uppercase;
+                color: #555;
+                font-size: 16px;
+                font-weight: 900;
+            }
+            p {
+                color: #999;
+                font-weight: 300;
+                font-size: 13px;
+            }
+        }
+        div.menu {
+            overflow-y: scroll;
+            height: 77vh;
+            div.sub-menu {
+                padding: 10px 0px;
+                h3 {
+                    text-transform: capitalize;
+                    font-size: 16px;
+                    font-family: $roboto;
+                    font-weight: 400;
+                    padding: 10px 20px;
+                }
+                ul {
+                    li {
+                        &.active {
+                            a {
+                                color: $main;
+                                background: lighten(#edf0f5, 3%);
+                            }
+                        }
+                        a {
+                            display: block;
+                            text-decoration: none;
+                            color: #555;
+                            font-size: 16px;
+                            padding: 12px;
+                            padding-left: 20px;
+                            font-weight: 300;
+                            &:hover {
+                                background: #edf0f5;
+                            }
+                            i {
+                                margin-right: 10px;
+                                font-size: 22px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    div.content {
+        float: left;
+        width: 80%;
+        margin-left: 20%;
+        header {
+            background: lighten($main, 4%);
+            color: #fff;
+            width: 100%;
+            height: 73px;
+            div.title {
+                width: 40%;
+                h2 {
+                    font-weight: 400;
+                    opacity: 0.5;
+                    line-height: 73px;
+                    padding-left: 20px;
+                }
+            }
+        }
+        div.view {
+            padding: 10px 20px;
+            .data-table {
+                width: 100%;
+                margin: 10px auto;
+                &#tbjadwal {
+                    .data {
+                        &.check {
+                            width: 5%;
+                        }
+                        &.maskapai {
+                            width: 20%;
+                        }
+                        &.asal {
+                            width: 12%;
+                        }
+                        &.tujuan {
+                            width: 12%;
+                        }
+                        &.jam-berangkat {
+                            width: 10%;
+                        }
+                        &.jam-tiba {
+                            width: 10%;
+                        }
+                        &.harga-tiket {
+                            width: 13%;
+                        }
+                        &.kapasitas {
+                            width: 10%;
+                        }
+                    }
+                }
+                &#tbpemesanan {
+                    .data {
+                        &.nama {
+                            width: 20%;
+                        }
+                        &.tanggal {
+                            width: 18%;
+                        }
+                        &.jam {
+                            width: 13%;
+                        }
+                        &.total-bayar {
+                            width: 20%;
+                        }
+                        &.status {
+                            width: 15%;
+                        }
+                    }
+                }
+                &#tbtiket {
+                    .data {
+                        &.no {
+                            width: 12%;
+                        }
+                        &.rute {
+                            width: 23%;
+                            .ion-plane {
+                                margin: 0 10px;
+                                color: #888;
+                            }
+                        }
+                        &.harga {
+                            width: 13%;
+                        }
+                        &.berangkat {
+                            width: 13%;
+                        }
+                        &.penumpang {
+                            width: 10%;
+                        }
+                        &.status {
+                            width: 10%;
+                        }
+                        &.detail {
+                            a {
+                                text-decoration: none;
+                                color: $main;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+                .card {
+                    background-color: #fff;
+                    width: 100%;
+                    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+                    padding: 0 0px;
+                    border-radius: 4px;
+                    .row {
+                        border-bottom: 1px solid #eee;
+                        @include clearfix;
+                        &:hover {
+                            background: #f8f8f8;
+                            &.bar,
+                            &.habis,
+                            &.header {
+                                background: none;
+                            }
+                            &.info {
+                                background: #fff;
+                            }
+                        }
+                        .data.full {
+                            width: 100%;
+                            text-align: center;
+                            h3 {
+                                font-size: 20px;
+                                margin: 10px 0;
+                                color: #555;
+                            }
+                            i {
+                                color: #777;
+                                display: block;
+                                font-size: 40px;
+                            }
+                        }
+                        &.bar {
+                            padding: 20px 20px;
+                            .title {
+                                float: left;
+                                h3 {
+                                    font-weight: 400;
+                                    color: #333;
+                                }
+                            }
+                            .action {
+                                float: right;
+                                a {
+                                    font-size: 16px;
+                                    background-color: $main;
+                                    color: #fff;
+                                    text-decoration: none;
+                                    padding: 8px 25px;
+                                    border-radius: 3px;
+                                    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.1);
+                                    text-transform: uppercase;
+                                    font-weight: 600;
+                                    i {
+                                        margin-right: 10px;
+                                    }
+                                }
+                            }
+                        }
+                        &.habis {
+                            background: $bgerror;
+                        }
+                        &.header {
+                            .data {
+                                font-weight: 400;
+                                color: #999;
+                                font-size: 16px;
+                            }
+                        }
+                        &.info {
+                            padding:5px 20px;
+                            p {
+                                color:$main;
+                                padding:10px;
+                            }
+                            .btn-hapus {
+                                display: block;
+                                background: transparent;
+                                border:1px solid #eee;
+                                color: #F92F2F;
+                                padding:10px 20px;
+                                border:none;
+                                border-radius: 3px;
+                                &:hover {
+                                    background: #fafafa;
+                                }
+                                i {
+                                    margin-right:10px;
+                                }
+                            }
+                        }
+                        .data {
+                            float: left;
+                            padding: 15px;
+                            font-weight: 300;
+                            color: #000;
+                            font-size: 14px;
+                            &.edit {
+                                float: right;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .dialog-form {
+        position: fixed;
+        background: #f8f8f8;
+        height: 80vh;
+        width: 50%;
+        left: 25%;
+        top: 5vh;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+        z-index: 20;
+        border-radius: 5px;
+        overflow: hidden;
+        transition:all .2s ease;
+        transform:scale(0);
+        &.show {
+         transform:scale(1);
+        }
+        div.dialog-panel {
+            background: #fff;
+            width: 100%;
+            height: 30px;
+            overflow: hidden;
+            border-bottom: 1px solid #eee;
+            @include clearfix;
+            div.title-panel {
+                float: left;
+                width: 50%;
+                padding-left: 20px;
+                h3 {
+                    text-transform: uppercase;
+                    line-height: 30px;
+                    color: #666;
+                    letter-spacing: 1px;
+                    font-size: 12px;
+                    font-weight: 900;
+                }
+            }
+            div.action {
+                width: 20%;
+                float: right;
+                @include clearfix;
+                button.btn-close {
+                    line-height: 30px;
+                    width: 33.3333%;
+                    display: block;
+                    float: right;
+                    background: #fff;
+                    border: none;
+                    font-size: 20px;
+                    border-left: 1px solid #eee;
+                    color: #ddd;
+                    &:hover {
+                        color: #aaa;
+                    }
+                    &:focus {
+                        outline: none;
+                        background: #f8f8f8;
+                    }
+                }
+            }
+        }
+        div.dialog-content {
+            padding: 20px 40px;
+            overflow-y: scroll;
+            height: 100%;
+
+            div.row {
+                @include clearfix;
+                padding: 10px 0;
+                div.label {
+                    width: 30%;
+                    float: left;
+                    padding-top: 10px;
+                    label {
+                        font-size: 14px;
+                        color: #777;
+                        display: block;
+                        font-weight: 300;
+                    }
+                    p {
+                        font-weight: 300;
+                        font-size: 12px;
+                        color: #999;
+                    }
+                }
+                div.input {
+                    width: 70%;
+                    float: left;
+                    input {
+                        width: 100%;
+                        padding: 10px 0;
+                        line-height: 20px;
+                        display: block;
+                        border: none;
+                        background: transparent;
+                        box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
+                        &:focus {
+                            box-shadow: 0 2px 0 0 $main;
+                        }
+                    }
+                    button {
+                        border: none;
+                        display: block;
+                        background: transparent;
+                        padding:10px 20px;
+                        margin-top: 30px;
+                        margin-bottom: 20px;
+                        margin-left: 20px;
+                        box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);
+                        text-transform: uppercase;
+                        i {
+                           margin-right: 10px;
+                        }
+                        &:focus {
+                           outline: none;
+                        }
+                        &.reset {
+                           background: #fff;
+                           color:$main;
+                        }
+                        &.submit {
+                           background: $main;
+                           color:#fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .overlay {
+        background: rgba(0, 0, 0, 0.2);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        display: none;
+        &.show {
+         display: block;
+        }
+    }
+}
+
+.pull-right {
+    float: right;
+}
+
+.pull-left {
+    float: left;
+}

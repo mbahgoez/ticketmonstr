@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TicketMonstr - Dashboard Admin</title>
+    <link rel="stylesheet" href="../css/ionicons.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body id="admin">
+    <nav>
+        <div class="header-bar">
+            <h1><i class="ion-ionic"></i>TicketMonstr</h1>
+        </div>
+        <div class="user">
+            <h3>Bagus Mantonafi</h3>
+            <p>Masuk sebagai admin</p>
+        </div>
+        <div class="menu">
+            <div class="sub-menu">
+                <h3>Dashboard</h3>
+                <ul>
+                    <li><a href=""><i class="ion-stats-bars"></i>Statistik</a></li>
+                    <li><a href="jadwal-penerbangan.html"><i class="ion-ios-calendar"></i>Jadwal Penerbangan</a></li>
+                </ul>
+            </div>
+            <div class="sub-menu">
+                <h3>Pemesanan</h3>
+                <ul>
+                    <li><a href="daftar-pemesanan.html"><i class="ion-ios-list-outline"></i>Daftar Pemesanan</a></li>
+                    <li><a href="pemesanan-pending.html"><i class="ion-funnel"></i>Pemesanan Pending</a></li>
+                    <li><a href="pemesanan-sukses.html"><i class="ion-ios-checkmark-outline"></i>Pemesanan Sukses</a></li>
+                </ul>
+            </div>
+            <div class="sub-menu">
+                <h3>Tiket</h3>
+                <ul>
+                    <li><a href="tiket-terjual.html"><i class="ion-ios-cart-outline"></i>Tiket Terjual</a></li>
+                    <li class="active"><a href="tiket-dibatalkan.html"><i class="ion-android-cancel"></i>Tiket Dibatalkan</a></li>
+                </ul>
+            </div>
+            <div class="sub-menu">
+                <h3>Konfirmasi</h3>
+                <ul>
+                    <li><a href="konfirmasi-pembayaran.html"><i class="ion-flag"></i>Konfirmasi Pembayaran</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="content">
+        <header>
+            <div class="title">
+                <h2>DASHBOARD</h2>
+            </div>
+        </header>
+        <div class="view">
+            <div class="data-table" id="tbtiket">
+                <div class="card">
+                    <div class="row bar">
+                        <div class="title">
+                            <h3>Daftar Pemesanan</h3></div>
+                        <div class="action"></div>
+                    </div>
+                    <div class="row header">
+                        <div class="check data">
+                            <input type="checkbox">
+                        </div>
+                        <div class="data no">No Tiket</div>
+                        <div class="data rute">Rute Penerbangan</div>
+                        <div class="data harga">Harga</div>
+                        <div class="data berangkat">Berangkat</div>
+                        <div class="data penumpang">Penumpang</div>
+                        <div class="data status">Status</div>
+                        <div class="data detail">Detail</div>
+                    </div>
+                    <div class="row">
+                        <div class="check data">
+                            <input type="checkbox">
+                        </div>
+                        <div class="data no">GA 4060</div>
+                        <div class="data rute">
+                            Denpasar
+                            <i class="ion-plane desplane"></i> Jakarta
+                        </div>
+                        <div class="data harga">Rp. 450.000</div>
+                        <div class="data berangkat">16 DES 2016</div>
+                        <div class="data penumpang">2 Orang</div>
+                        <div class="data status">Dibatalkan</div>
+                        <div class="data detail">
+                            <a href="">Lihat Selengkapnya</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="check data">
+                            <input type="checkbox">
+                        </div>
+                        <div class="data no">GA 4061</div>
+                        <div class="data rute">
+                            Bandung
+                            <i class="ion-plane desplane"></i> Yogyakarta
+                        </div>
+                        <div class="data harga">Rp. 350.000</div>
+                        <div class="data berangkat">17 DES 2016</div>
+                        <div class="data penumpang">1 Orang</div>
+                        <div class="data status">Dibatalkan</div>
+                        <div class="data detail">
+                            <a href="">Lihat Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,632 @@
+/* Created by Bagus Mantonafi & Adimas Putra Istiawan */
+@font-face {
+  font-family: 'lato';
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: 'roboto';
+  src: url("../fonts/Roboto-Thin.ttf");
+  font-weight: 200; }
+@font-face {
+  font-family: 'roboto';
+  src: url("../fonts/Roboto-Bold.ttf");
+  font-weight: 900; }
+@font-face {
+  font-family: 'roboto';
+  src: url("../fonts/Roboto-Light.ttf");
+  font-weight: 300; }
+@font-face {
+  font-family: 'roboto';
+  src: url("../fonts/Roboto-Medium.ttf");
+  font-weight: 500; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif; }
+
+body {
+  background: #f8f8f8; }
+
+.ion-plane {
+  display: inline-block;
+  transform: rotate(90deg); }
+
+select:focus, input:focus {
+  outline: none; }
+
+* {
+  font-family: "lato", sans-serif; }
+
+#pemesanan .container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10%; }
+
+#pemesanan header {
+  height: 70px;
+  width: 100%;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+  background: #fff; }
+  #pemesanan header::after {
+    clear: both;
+    content: "";
+    display: block; }
+  #pemesanan header .container {
+    padding-right: 2%; }
+  #pemesanan header div.title {
+    float: left;
+    line-height: 70px;
+    color: #1f88e5; }
+    #pemesanan header div.title h1 {
+      font-size: 24px; }
+      #pemesanan header div.title h1 i {
+        margin-right: 10px; }
+  #pemesanan header div.menu {
+    float: right;
+    line-height: 70px; }
+    #pemesanan header div.menu ul {
+      text-align: center; }
+      #pemesanan header div.menu ul li {
+        display: inline-block;
+        list-style-type: none; }
+        #pemesanan header div.menu ul li.active {
+          position: relative; }
+          #pemesanan header div.menu ul li.active a:before {
+            content: "";
+            position: absolute;
+            background: #1f88e5;
+            height: 3px;
+            left: 0;
+            right: 0;
+            top: 0; }
+        #pemesanan header div.menu ul li a {
+          color: #1f88e5;
+          display: block;
+          padding: 0 20px;
+          font-size: 18px;
+          font-weight: 300;
+          text-decoration: none; }
+        #pemesanan header div.menu ul li button {
+          background: #fff;
+          font-size: 20px;
+          color: #1f88e5;
+          border: none;
+          padding: 0 20px;
+          display: block; }
+#pemesanan div.banner {
+  background: #1f88e5;
+  text-align: center;
+  color: #fff;
+  padding: 150px 0;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2); }
+  #pemesanan div.banner h2 {
+    font-size: 90px; }
+  #pemesanan div.banner p {
+    font-size: 24px;
+    font-weight: 300; }
+  #pemesanan div.banner div.row {
+    width: 50%;
+    margin: 20px auto;
+    margin-top: 30px; }
+    #pemesanan div.banner div.row::after {
+      clear: both;
+      content: "";
+      display: block; }
+    #pemesanan div.banner div.row .center {
+      float: left;
+      width: 20%;
+      line-height: 40px; }
+      #pemesanan div.banner div.row .center span {
+        display: block;
+        font-weight: 200;
+        text-align: center; }
+    #pemesanan div.banner div.row div.column-2 {
+      width: 40%;
+      float: left; }
+      #pemesanan div.banner div.row div.column-2 a {
+        width: 100%;
+        color: #fff;
+        background: #1f88e5;
+        display: block;
+        text-decoration: none;
+        padding: 8px 12px;
+        font-size: 25px;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2); }
+        #pemesanan div.banner div.row div.column-2 a i {
+          margin-left: 10px; }
+        #pemesanan div.banner div.row div.column-2 a.daftar {
+          background: #fff;
+          color: #1f88e5; }
+
+section {
+  text-align: center;
+  padding: 20px;
+  padding: 50px 10%; }
+  section h2 {
+    font-size: 30px;
+    color: #616161; }
+  section p {
+    font-size: 24px;
+    font-weight: 300;
+    color: #666; }
+  section div.destination {
+    border-radius: 26px;
+    border: 1px solid #1f88e5;
+    width: 40%;
+    margin: 10px auto;
+    background: #fff;
+    overflow: hidden; }
+    section div.destination::after {
+      clear: both;
+      content: "";
+      display: block; }
+    section div.destination a {
+      text-decoration: none;
+      color: #1f88e5;
+      display: block;
+      width: 50%;
+      padding: 10px 0;
+      float: left;
+      font-weight: 300; }
+      section div.destination a.active {
+        background: #1f88e5;
+        color: #fff; }
+  section div.list-card {
+    margin: 50px 0; }
+    section div.list-card ul {
+      list-style-type: none; }
+      section div.list-card ul::after {
+        clear: both;
+        content: "";
+        display: block; }
+      section div.list-card ul li {
+        float: left;
+        width: 49%;
+        padding: 10px;
+        padding-left: 30px; }
+        section div.list-card ul li a {
+          text-align: left;
+          box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+          background: #fff;
+          display: block;
+          padding: 20px;
+          text-decoration: none;
+          color: #1f88e5; }
+          section div.list-card ul li a div.info::after {
+            clear: both;
+            content: "";
+            display: block; }
+          section div.list-card ul li a div.info h5 {
+            color: #999; }
+          section div.list-card ul li a div.info .float-left {
+            float: left; }
+          section div.list-card ul li a div.info .float-right {
+            float: right; }
+          section div.list-card ul li a div.info-location {
+            padding: 10px 0; }
+            section div.list-card ul li a div.info-location::after {
+              clear: both;
+              content: "";
+              display: block; }
+            section div.list-card ul li a div.info-location div.asal {
+              float: left;
+              width: 40%; }
+            section div.list-card ul li a div.info-location div.plane {
+              width: 20%;
+              float: left; }
+              section div.list-card ul li a div.info-location div.plane i {
+                color: #999;
+                animation: fly 3s infinite; }
+              section div.list-card ul li a div.info-location div.plane p {
+                font-size: 14px; }
+            section div.list-card ul li a div.info-location div.tujuan {
+              text-align: right;
+              width: 40%;
+              float: left; }
+          section div.list-card ul li a div.info-basic {
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+            text-align: center; }
+            section div.list-card ul li a div.info-basic h3 {
+              color: #0eb716;
+              font-size: 25px;
+              margin-bottom: 5px; }
+            section div.list-card ul li a div.info-basic p {
+              color: #999;
+              font-size: 12px; }
+
+footer {
+  width: 100%;
+  border-top: 1px solid #ddd;
+  color: #999;
+  text-align: left;
+  padding: 40px 10%; }
+  footer::after {
+    clear: both;
+    content: "";
+    display: block; }
+  footer p {
+    margin: 5px 0; }
+  footer div.footer-left {
+    width: 50%;
+    float: left; }
+    footer div.footer-left .copyright {
+      color: #444;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 1px; }
+    footer div.footer-left .links a {
+      letter-spacing: 1px;
+      color: #1f88e5;
+      font-size: 16px;
+      text-decoration: none;
+      font-weight: 500; }
+  footer .footer-right {
+    float: right;
+    width: 50%; }
+    footer .footer-right .phone {
+      float: right;
+      font-weight: 500;
+      color: #555;
+      font-size: 15px;
+      letter-spacing: 1px; }
+      footer .footer-right .phone i {
+        margin-right: 10px;
+        display: inline-block; }
+
+@keyframes fly {
+  0% {
+    transform: translateX(0%) rotate(90deg);
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    transform: translateX(550%) rotate(90deg);
+    opacity: 0; } }
+#admin * {
+  font-family: "roboto", sans-serif; }
+#admin body {
+  background: #edf0f5; }
+#admin .container {
+  width: 100%; }
+  #admin .container::after {
+    clear: both;
+    content: "";
+    display: block; }
+#admin nav {
+  float: left;
+  width: 20%;
+  height: 100vh;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  position: fixed; }
+  #admin nav div.header-bar {
+    height: 73px;
+    background: #1f88e5;
+    padding-left: 20px; }
+    #admin nav div.header-bar h1 {
+      font-weight: lighter;
+      line-height: 74px;
+      color: #fff;
+      font-weight: 500; }
+      #admin nav div.header-bar h1 i {
+        margin-right: 20px; }
+  #admin nav div.user {
+    padding: 20px 20px;
+    border-bottom: 1px solid #eee; }
+    #admin nav div.user h3 {
+      text-transform: uppercase;
+      color: #555;
+      font-size: 16px;
+      font-weight: 900; }
+    #admin nav div.user p {
+      color: #999;
+      font-weight: 300;
+      font-size: 13px; }
+  #admin nav div.menu {
+    overflow-y: scroll;
+    height: 77vh; }
+    #admin nav div.menu div.sub-menu {
+      padding: 10px 0px; }
+      #admin nav div.menu div.sub-menu h3 {
+        text-transform: capitalize;
+        font-size: 16px;
+        font-family: "roboto", sans-serif;
+        font-weight: 400;
+        padding: 10px 20px; }
+      #admin nav div.menu div.sub-menu ul li.active a {
+        color: #1f88e5;
+        background: #f7f8fa; }
+      #admin nav div.menu div.sub-menu ul li a {
+        display: block;
+        text-decoration: none;
+        color: #555;
+        font-size: 16px;
+        padding: 12px;
+        padding-left: 20px;
+        font-weight: 300; }
+        #admin nav div.menu div.sub-menu ul li a:hover {
+          background: #edf0f5; }
+        #admin nav div.menu div.sub-menu ul li a i {
+          margin-right: 10px;
+          font-size: 22px; }
+#admin div.content {
+  float: left;
+  width: 80%;
+  margin-left: 20%; }
+  #admin div.content header {
+    background: #3192e7;
+    color: #fff;
+    width: 100%;
+    height: 73px; }
+    #admin div.content header div.title {
+      width: 40%; }
+      #admin div.content header div.title h2 {
+        font-weight: 400;
+        opacity: 0.5;
+        line-height: 73px;
+        padding-left: 20px; }
+  #admin div.content div.view {
+    padding: 10px 20px; }
+    #admin div.content div.view .data-table {
+      width: 100%;
+      margin: 10px auto; }
+      #admin div.content div.view .data-table#tbjadwal .data.check {
+        width: 5%; }
+      #admin div.content div.view .data-table#tbjadwal .data.maskapai {
+        width: 20%; }
+      #admin div.content div.view .data-table#tbjadwal .data.asal {
+        width: 12%; }
+      #admin div.content div.view .data-table#tbjadwal .data.tujuan {
+        width: 12%; }
+      #admin div.content div.view .data-table#tbjadwal .data.jam-berangkat {
+        width: 10%; }
+      #admin div.content div.view .data-table#tbjadwal .data.jam-tiba {
+        width: 10%; }
+      #admin div.content div.view .data-table#tbjadwal .data.harga-tiket {
+        width: 13%; }
+      #admin div.content div.view .data-table#tbjadwal .data.kapasitas {
+        width: 10%; }
+      #admin div.content div.view .data-table#tbpemesanan .data.nama {
+        width: 20%; }
+      #admin div.content div.view .data-table#tbpemesanan .data.tanggal {
+        width: 18%; }
+      #admin div.content div.view .data-table#tbpemesanan .data.jam {
+        width: 13%; }
+      #admin div.content div.view .data-table#tbpemesanan .data.total-bayar {
+        width: 20%; }
+      #admin div.content div.view .data-table#tbpemesanan .data.status {
+        width: 15%; }
+      #admin div.content div.view .data-table#tbtiket .data.no {
+        width: 12%; }
+      #admin div.content div.view .data-table#tbtiket .data.rute {
+        width: 23%; }
+        #admin div.content div.view .data-table#tbtiket .data.rute .ion-plane {
+          margin: 0 10px;
+          color: #888; }
+      #admin div.content div.view .data-table#tbtiket .data.harga {
+        width: 13%; }
+      #admin div.content div.view .data-table#tbtiket .data.berangkat {
+        width: 13%; }
+      #admin div.content div.view .data-table#tbtiket .data.penumpang {
+        width: 10%; }
+      #admin div.content div.view .data-table#tbtiket .data.status {
+        width: 10%; }
+      #admin div.content div.view .data-table#tbtiket .data.detail a {
+        text-decoration: none;
+        color: #1f88e5;
+        font-weight: 600; }
+      #admin div.content div.view .data-table .card {
+        background-color: #fff;
+        width: 100%;
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+        padding: 0 0px;
+        border-radius: 4px; }
+        #admin div.content div.view .data-table .card .row {
+          border-bottom: 1px solid #eee; }
+          #admin div.content div.view .data-table .card .row::after {
+            clear: both;
+            content: "";
+            display: block; }
+          #admin div.content div.view .data-table .card .row:hover {
+            background: #f8f8f8; }
+            #admin div.content div.view .data-table .card .row:hover.bar, #admin div.content div.view .data-table .card .row:hover.habis, #admin div.content div.view .data-table .card .row:hover.header {
+              background: none; }
+            #admin div.content div.view .data-table .card .row:hover.info {
+              background: #fff; }
+          #admin div.content div.view .data-table .card .row .data.full {
+            width: 100%;
+            text-align: center; }
+            #admin div.content div.view .data-table .card .row .data.full h3 {
+              font-size: 20px;
+              margin: 10px 0;
+              color: #555; }
+            #admin div.content div.view .data-table .card .row .data.full i {
+              color: #777;
+              display: block;
+              font-size: 40px; }
+          #admin div.content div.view .data-table .card .row.bar {
+            padding: 20px 20px; }
+            #admin div.content div.view .data-table .card .row.bar .title {
+              float: left; }
+              #admin div.content div.view .data-table .card .row.bar .title h3 {
+                font-weight: 400;
+                color: #333; }
+            #admin div.content div.view .data-table .card .row.bar .action {
+              float: right; }
+              #admin div.content div.view .data-table .card .row.bar .action a {
+                font-size: 16px;
+                background-color: #1f88e5;
+                color: #fff;
+                text-decoration: none;
+                padding: 8px 25px;
+                border-radius: 3px;
+                box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.1);
+                text-transform: uppercase;
+                font-weight: 600; }
+                #admin div.content div.view .data-table .card .row.bar .action a i {
+                  margin-right: 10px; }
+          #admin div.content div.view .data-table .card .row.habis {
+            background: #fff2f2; }
+          #admin div.content div.view .data-table .card .row.header .data {
+            font-weight: 400;
+            color: #999;
+            font-size: 16px; }
+          #admin div.content div.view .data-table .card .row.info {
+            padding: 5px 20px; }
+            #admin div.content div.view .data-table .card .row.info p {
+              color: #1f88e5;
+              padding: 10px; }
+            #admin div.content div.view .data-table .card .row.info .btn-hapus {
+              display: block;
+              background: transparent;
+              border: 1px solid #eee;
+              color: #F92F2F;
+              padding: 10px 20px;
+              border: none;
+              border-radius: 3px; }
+              #admin div.content div.view .data-table .card .row.info .btn-hapus:hover {
+                background: #fafafa; }
+              #admin div.content div.view .data-table .card .row.info .btn-hapus i {
+                margin-right: 10px; }
+          #admin div.content div.view .data-table .card .row .data {
+            float: left;
+            padding: 15px;
+            font-weight: 300;
+            color: #000;
+            font-size: 14px; }
+            #admin div.content div.view .data-table .card .row .data.edit {
+              float: right; }
+#admin .dialog-form {
+  position: fixed;
+  background: #f8f8f8;
+  height: 80vh;
+  width: 50%;
+  left: 25%;
+  top: 5vh;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  z-index: 20;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all .2s ease;
+  transform: scale(0); }
+  #admin .dialog-form.show {
+    transform: scale(1); }
+  #admin .dialog-form div.dialog-panel {
+    background: #fff;
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+    border-bottom: 1px solid #eee; }
+    #admin .dialog-form div.dialog-panel::after {
+      clear: both;
+      content: "";
+      display: block; }
+    #admin .dialog-form div.dialog-panel div.title-panel {
+      float: left;
+      width: 50%;
+      padding-left: 20px; }
+      #admin .dialog-form div.dialog-panel div.title-panel h3 {
+        text-transform: uppercase;
+        line-height: 30px;
+        color: #666;
+        letter-spacing: 1px;
+        font-size: 12px;
+        font-weight: 900; }
+    #admin .dialog-form div.dialog-panel div.action {
+      width: 20%;
+      float: right; }
+      #admin .dialog-form div.dialog-panel div.action::after {
+        clear: both;
+        content: "";
+        display: block; }
+      #admin .dialog-form div.dialog-panel div.action button.btn-close {
+        line-height: 30px;
+        width: 33.3333%;
+        display: block;
+        float: right;
+        background: #fff;
+        border: none;
+        font-size: 20px;
+        border-left: 1px solid #eee;
+        color: #ddd; }
+        #admin .dialog-form div.dialog-panel div.action button.btn-close:hover {
+          color: #aaa; }
+        #admin .dialog-form div.dialog-panel div.action button.btn-close:focus {
+          outline: none;
+          background: #f8f8f8; }
+  #admin .dialog-form div.dialog-content {
+    padding: 20px 40px;
+    overflow-y: scroll;
+    height: 100%; }
+    #admin .dialog-form div.dialog-content div.row {
+      padding: 10px 0; }
+      #admin .dialog-form div.dialog-content div.row::after {
+        clear: both;
+        content: "";
+        display: block; }
+      #admin .dialog-form div.dialog-content div.row div.label {
+        width: 30%;
+        float: left;
+        padding-top: 10px; }
+        #admin .dialog-form div.dialog-content div.row div.label label {
+          font-size: 14px;
+          color: #777;
+          display: block;
+          font-weight: 300; }
+        #admin .dialog-form div.dialog-content div.row div.label p {
+          font-weight: 300;
+          font-size: 12px;
+          color: #999; }
+      #admin .dialog-form div.dialog-content div.row div.input {
+        width: 70%;
+        float: left; }
+        #admin .dialog-form div.dialog-content div.row div.input input {
+          width: 100%;
+          padding: 10px 0;
+          line-height: 20px;
+          display: block;
+          border: none;
+          background: transparent;
+          box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2); }
+          #admin .dialog-form div.dialog-content div.row div.input input:focus {
+            box-shadow: 0 2px 0 0 #1f88e5; }
+        #admin .dialog-form div.dialog-content div.row div.input button {
+          border: none;
+          display: block;
+          background: transparent;
+          padding: 10px 20px;
+          margin-top: 30px;
+          margin-bottom: 20px;
+          margin-left: 20px;
+          box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+          text-transform: uppercase; }
+          #admin .dialog-form div.dialog-content div.row div.input button i {
+            margin-right: 10px; }
+          #admin .dialog-form div.dialog-content div.row div.input button:focus {
+            outline: none; }
+          #admin .dialog-form div.dialog-content div.row div.input button.reset {
+            background: #fff;
+            color: #1f88e5; }
+          #admin .dialog-form div.dialog-content div.row div.input button.submit {
+            background: #1f88e5;
+            color: #fff; }
+#admin .overlay {
+  background: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  display: none; }
+  #admin .overlay.show {
+    display: block; }
+
+.pull-right {
+  float: right; }
+
+.pull-left {
+  float: left; }
+
+/*# sourceMappingURL=style.css.map */

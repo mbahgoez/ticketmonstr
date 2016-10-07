@@ -1,0 +1,18 @@
+* {
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	font-family: $segoe;
+}
+body {
+	background: #f8f8f8;
+}
+
+.ion-plane {
+	display: inline-block;
+	transform:rotate(90deg);
+}
+
+select:focus, input:focus {
+	outline: none;
+}
