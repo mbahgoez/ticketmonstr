@@ -1,1 +1,1 @@
-browser-sync start --server --files "*","css","js","admin/*"
+browser-sync start --proxy "localhost/ticketmonstr" --files "*","css","js","admin/*"
