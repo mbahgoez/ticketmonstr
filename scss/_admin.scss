@@ -118,20 +118,11 @@
                         &.maskapai {
                             width: 20%;
                         }
-                        &.asal {
-                            width: 12%;
-                        }
-                        &.tujuan {
-                            width: 12%;
-                        }
-                        &.jam-berangkat {
-                            width: 10%;
-                        }
-                        &.jam-tiba {
-                            width: 10%;
+                        &.tujuan-keberangkatan {
+                            width: 24%;
                         }
                         &.harga-tiket {
-                            width: 13%;
+                            width: 24%;
                         }
                         &.kapasitas {
                             width: 10%;
@@ -201,13 +192,24 @@
                         @include clearfix;
                         &:hover {
                             background: #f8f8f8;
+                            &.habis {
+                                background: #f8f8f8;
+                            }
                             &.bar,
-                            &.habis,
                             &.header {
                                 background: none;
                             }
                             &.info {
                                 background: #fff;
+                            }
+                        }
+                        .data.divider {
+                            width: 100%;
+                            text-align: center;
+                            border-top:1px solid #eee;
+                            p {
+                                color:#777;
+                                font-weight: 300;
                             }
                         }
                         .data.full {

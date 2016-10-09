@@ -1,7 +1,16 @@
 <?php
 
-function directToIndex(){
-	header("Location:promo.php");
+
+function ifSetSession(){
+	if(isset($_SESSION)){
+		header("Location:index.php");
+	} 
+}
+
+function ifNotSetSession(){
+	if(!isset($_SESSION)){
+		header("Location:login.php");
+	}	
 }
 
 function path_url($url){

@@ -3,6 +3,15 @@
 }
 
 #pemesanan {
+    #pendaftaran {
+        text-align: center;
+        box-shadow: 0 1px 2px 0 rgba(0,0,0, 0.2);
+        padding: 10px 0;
+        background: #fff;
+        color:$main;
+        border-bottom: 1px solid #eee;
+    }
+
     .container {
         width: 100%;
         margin: 0 auto;
@@ -126,6 +135,7 @@
     }
 }
 
+
 section {
     text-align: center;
     padding: 20px;
@@ -229,6 +239,88 @@ section {
                             font-size: 12px;
                         }
                     }
+                }
+            }
+        }
+    }
+}
+#tersedia {
+    .content-list {
+        width:100%;
+        @include clearfix;
+        padding-top:50px;
+    }
+    
+    .list-filter {
+        float:left;
+        width: 30%;
+        .row-card {
+            font-family: 'lato';
+            background: #fff;
+            width: 100%;
+            border-radius: 3px;
+            margin:10px 0;
+            padding:20px 0px;
+            box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2);
+            h3 {
+                font-family: 'lato';
+                font-weight: 900;
+                text-align: left;
+                padding:10px 20px;
+                text-transform: uppercase;
+            }
+            ul {
+                list-style-type: none;
+                li {
+                    border-bottom: 1px solid #eee;
+                    label {
+                        font-weight: 300;
+                        font-size: 14px;
+                        text-decoration: none;
+                        text-align: left;
+                        font-family: 'lato';
+                        display: block;
+                        padding:10px 30px;
+                        input[type="checkbox"]{
+                            margin-right: 20px;
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+            &.button {
+                padding:10px;
+            }
+            button {
+                display: block;
+                width: 100%;
+                padding:8px;
+                border:none;
+                border-radius: 3px;
+                background: $main;
+                color:#fff;
+            }
+        }
+    }
+    .list-card {
+        margin-top: 0;
+        float:left;
+        width: 70%;
+        li {
+            width: 100%;
+        }
+    }
+}
+#maskapai {
+    .list-card {
+        li {
+            width:33.3333%;
+            float:left;
+            a {
+                img {
+                    display: block;
+                    width:80%;
+                    margin-left:10%;
                 }
             }
         }

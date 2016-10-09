@@ -6,7 +6,7 @@
     <p>Kini mencari tiket pesawat dapat dilakukan dimanapun, kapanpun dan siapapun</p>
     <div class="row">
         <div class="column-2">
-            <a href="">LOGIN <i class="ion-log-in"></i></a>
+            <a href="login.php">LOGIN <i class="ion-log-in"></i></a>
         </div>
         <div class="center"><span>atau</span></div>
         <div class="column-2"><a class="daftar" href="">DAFTAR <i class="ion-log-out"></i></a></div>

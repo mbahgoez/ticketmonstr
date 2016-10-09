@@ -1,0 +1,70 @@
+#daftar {
+    background: #eee;
+    header {
+        height: 60px;
+        background: $main;
+        width: 100%;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    	h1 {
+    		font-size:25px;
+    		text-transform:uppercase;
+    		line-height: 60px;
+    		color:#fff;
+    		text-align: center;
+    	}
+    }
+    
+    .row {
+        @include clearfix;
+        .col-100 {
+        	width: 100%;
+        	button {
+        		font-weight: 700;
+        		width:100%;
+        		padding:10px 20px;
+        		display: block;
+        		border:none;
+        		background: $main;
+        		color:#fff;
+        		border-radius: 3px;
+        		box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2);
+        	}
+        }
+        .col-50 {
+            float: left;
+            width: 50%;
+            padding: 10px 30px;
+            @include clearfix;
+            .label {
+                float: left;
+                width: 30%;
+                label {
+                    font-size: 14px;
+                        color: #777;
+                        display: block;
+                        font-weight: 300;
+                    text-transform: uppercase;
+                }
+            }
+            .input {
+                float: left;
+                width: 70%;
+                label {
+                	margin-right:30px;
+                }
+                input[type="text"], input[type="number"], input[type="email"],input[type="password"] {
+                    width: 100%;
+                    padding: 10px 0;
+                    line-height: 20px;
+                    display: block;
+                    border: none;
+                    background: transparent;
+                    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
+                    &:focus {
+                        box-shadow: 0 2px 0 0 $main;
+                    }
+                }
+            }
+        }
+    }
+}

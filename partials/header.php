@@ -1,3 +1,8 @@
+ <?php if(isset($_SESSION['user'])){ ?>
+    <div id="pendaftaran">
+        <p>Anda Login sebagai pemesan! Selamat memesan tiket dan lihat promo menarik bulan ini.</p>
+    </div>
+    <?php } ?>
  <header>
         <div class="container">
             <div class="title">
@@ -7,11 +12,25 @@
 				</h1>
             </div>
             <div class="menu">
-                <ul>
+                <ul>     
                     <li class="active">
-                        <a href="">Promo</a>
+                        <a href="promo.php">Promo</a>
                     </li>
-                    <li><a href="">Maskapai</a></li>
+                    <?php if(isset($_SESSION['user'])){ ?>
+                        <li>
+                            <a href="tersedia.php">Tiket Tersedia</a>
+                        </li>
+                    <?php } ?>
+                    <li><a href="maskapai.php">Maskapai</a></li>
+                    <?php if(isset($_SESSION['user'])){ ?>
+                        <li>
+                            <a href="">Pemesanan</a>
+                        </li>
+                        <li>
+                            <a href="">Tiket</a>
+                        </li>
+                    <?php } ?>
+                    <?php if(!isset($_SESSION['user'])){ ?>
                     <li>
                         <a href="">
                         	Cara Memesan
@@ -20,8 +39,17 @@
                     <li>
                         <a href="">Syarat</a>
                     </li>
+                    <?php } ?>
+                    <?php if(isset($_SESSION['user'])){ ?>                
+                        <li>
+                            <a href="logout.php" title="Keluar">
+                                <i class="ion-power"></i>  
+                            </a>
+                        </li>
+                        <?php } ?>
+                    
                     <li>
-                        <button>
+                        <button title="pencarian">
                             <i class="ion-ios-search"></i>
                         </button>
                     </li>

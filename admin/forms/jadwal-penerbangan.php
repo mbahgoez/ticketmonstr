@@ -14,7 +14,6 @@
             <div class="row">
                 <div class="label">
                     <label>Masukan maskapai</label>
-                    <p>Masukan maskapai pilihan</p>
                 </div>
                 <div class="input">
                     <input type="text" list="data-maskapai" placeholder="Maskapai Penerbangan" name="maskapai">
@@ -26,6 +25,14 @@
                         <option value="Emirates">
                         <option value="Qantas">
                     </datalist>
+                </div>
+            </div>
+            <div class="row">
+                <div class="label">
+                    <label>Harga</label>
+                </div>
+                <div class="input">
+                    <input type="number" placeholder="Harga" name="harga">
                 </div>
             </div>
             <div class="row">
@@ -70,10 +77,27 @@
             </div>
             <div class="row">
                 <div class="label">
-                    <label>Sisa tiket</label>
+                    <label>Tanggal Berangkat</label>
                 </div>
                 <div class="input">
-                    <input type="text" placeholder="Sisa Tiket" name="sisa_tiket">
+                    <input type="date" name="tgl_berangkat">
+                </div>
+            </div>
+            <div class="row">
+                <div class="label">
+                    <label></label>
+                </div>
+                <div class="input">
+
+                    <div class="col-50" style="width:50%;float:left">
+                        <label>Jam Berangkat</label>
+                        <input type="text" placeholder="00:00" name="jam_berangkat">
+                    </div>
+                    
+                    <div class="col-50" style="width:50%;float:left">
+                        <p>Jam Tiba</p>
+                        <input type="text" placeholder="00:00" name="jam_tiba">
+                    </div>
                 </div>
             </div>
             <div class="row">

@@ -34,9 +34,267 @@ body {
 select:focus, input:focus {
   outline: none; }
 
+body#login {
+  background-image: linear-gradient(rgba(31, 136, 229, 0.9) 80%, #1f88e5), url("../image/bg2.jpg");
+  background-repeat: no-repeat;
+  color: #fff;
+  background-attachment: fixed;
+  font-family: 'Roboto'; }
+  @media screen and (max-width: 360px) {
+    body#login {
+      background-attachment: fixed;
+      background-position: center; } }
+  body#login #pendaftaran {
+    text-align: center;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    background: #1f88e5; }
+
+div.container {
+  width: 100%;
+  padding: 3% 10%; }
+  @media screen and (max-width: 360px) {
+    div.container {
+      padding: 0; } }
+  div.container header {
+    width: 100%; }
+    @media screen and (max-width: 360px) {
+      div.container header {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 10px 0;
+        box-shadow: 0 1px 10px 0 rgba(17, 17, 17, 0.4);
+        position: fixed;
+        color: #fff; } }
+    div.container header h1 {
+      text-align: center;
+      font-size: 48px; }
+      @media screen and (max-width: 360px) {
+        div.container header h1 {
+          font-size: 20px; }
+          div.container header h1 i {
+            margin-right: 10px; } }
+  div.container div.row {
+    width: 100%;
+    padding-top: 60px; }
+    @media screen and (max-width: 360px) {
+      div.container div.row {
+        padding-top: 70px; } }
+    div.container div.row::after {
+      clear: both;
+      content: "";
+      display: block; }
+    div.container div.row section {
+      width: 50%;
+      padding: 0 30px;
+      float: left; }
+      @media screen and (max-width: 360px) {
+        div.container div.row section {
+          width: 100%;
+          padding: 0; } }
+      div.container div.row section:first-child {
+        border-right: 1px solid #ccc; }
+        @media screen and (max-width: 360px) {
+          div.container div.row section:first-child {
+            border: none; } }
+      div.container div.row section#signup {
+        padding: 0 10px; }
+        @media screen and (max-width: 360px) {
+          div.container div.row section#signup {
+            border-bottom: 1px solid #fff;
+            padding-bottom: 20px;
+            margin-bottom: 20px; } }
+        div.container div.row section#signup h2 {
+          color: #fff;
+          font-size: 30px;
+          font-family: 'Raleway'; }
+          @media screen and (max-width: 360px) {
+            div.container div.row section#signup h2 {
+              font-size: 18px;
+              text-align: center; } }
+        div.container div.row section#signup p {
+          color: #fff;
+          font-size: 20px;
+          font-family: 'Segoe UI'; }
+          @media screen and (max-width: 360px) {
+            div.container div.row section#signup p {
+              font-size: 16px;
+              text-align: center; } }
+        div.container div.row section#signup i {
+          padding: 20px 0;
+          font-size: 100px;
+          text-align: center;
+          display: block; }
+        div.container div.row section#signup div.sub-row {
+          width: 100%; }
+          div.container div.row section#signup div.sub-row:after {
+            clear: both;
+            display: block;
+            content: ""; }
+          div.container div.row section#signup div.sub-row div.col-50 {
+            width: 100%;
+            float: left;
+            padding: 10px; }
+            @media screen and (max-width: 360px) {
+              div.container div.row section#signup div.sub-row div.col-50 {
+                width: 100%;
+                padding: 4px; } }
+            div.container div.row section#signup div.sub-row div.col-50 a {
+              display: block;
+              text-decoration: none;
+              width: 100%;
+              font-size: 18px;
+              font-family: 'Raleway';
+              font-weight: 600;
+              color: #1f88e5;
+              padding: 10px;
+              border: none;
+              border-radius: 3px; }
+              @media screen and (max-width: 360px) {
+                div.container div.row section#signup div.sub-row div.col-50 a {
+                  font-size: 14px; } }
+              div.container div.row section#signup div.sub-row div.col-50 a#daftar {
+                background: #fff; }
+              div.container div.row section#signup div.sub-row div.col-50 a#langganan {
+                color: #fff;
+                background: rgba(255, 255, 255, 0.3); }
+      @media screen and (max-width: 360px) {
+        div.container div.row section#signin {
+          padding: 0 10px;
+          text-align: center; } }
+      div.container div.row section#signin h2 {
+        font-size: 30px;
+        font-family: 'Raleway';
+        color: #ff4e00; }
+        @media screen and (max-width: 360px) {
+          div.container div.row section#signin h2 {
+            font-size: 18px; } }
+      div.container div.row section#signin p {
+        color: #fff;
+        font-size: 20px;
+        font-family: 'Segoe UI'; }
+        @media screen and (max-width: 360px) {
+          div.container div.row section#signin p {
+            font-size: 16px; } }
+      div.container div.row section#signin form {
+        padding: 30px 0; }
+        @media screen and (max-width: 360px) {
+          div.container div.row section#signin form {
+            padding: 20px 10px; } }
+        div.container div.row section#signin form input {
+          width: 80%;
+          border: none;
+          padding: 14px;
+          margin: 10px 0;
+          border-radius: 3px;
+          font-size: 18px;
+          font-family: 'Raleway';
+          font-weight: 700; }
+          @media screen and (max-width: 360px) {
+            div.container div.row section#signin form input {
+              width: 100%;
+              padding: 8px 12px;
+              font-size: 12px;
+              font-weight: 500; } }
+          div.container div.row section#signin form input::-webkit-input-placeholder {
+            color: #bcbcbc; }
+        div.container div.row section#signin form button {
+          margin-top: 15px;
+          width: 80%;
+          font-size: 18px;
+          font-family: 'Raleway';
+          font-weight: 600;
+          color: #fff;
+          padding: 10px;
+          border: none;
+          border-radius: 3px;
+          background: #ff4e00; }
+          @media screen and (max-width: 360px) {
+            div.container div.row section#signin form button {
+              width: 100%;
+              font-size: 12px; } }
+  div.container footer {
+    width: 100%;
+    padding: 20px; }
+    div.container footer p {
+      text-align: center;
+      font-size: 24px;
+      color: #fff; }
+      @media screen and (max-width: 360px) {
+        div.container footer p {
+          font-size: 12px; } }
+
+#daftar {
+  background: #eee; }
+  #daftar header {
+    height: 60px;
+    background: #1f88e5;
+    width: 100%;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2); }
+    #daftar header h1 {
+      font-size: 25px;
+      text-transform: uppercase;
+      line-height: 60px;
+      color: #fff;
+      text-align: center; }
+  #daftar .row::after {
+    clear: both;
+    content: "";
+    display: block; }
+  #daftar .row .col-100 {
+    width: 100%; }
+    #daftar .row .col-100 button {
+      font-weight: 700;
+      width: 100%;
+      padding: 10px 20px;
+      display: block;
+      border: none;
+      background: #1f88e5;
+      color: #fff;
+      border-radius: 3px;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2); }
+  #daftar .row .col-50 {
+    float: left;
+    width: 50%;
+    padding: 10px 30px; }
+    #daftar .row .col-50::after {
+      clear: both;
+      content: "";
+      display: block; }
+    #daftar .row .col-50 .label {
+      float: left;
+      width: 30%; }
+      #daftar .row .col-50 .label label {
+        font-size: 14px;
+        color: #777;
+        display: block;
+        font-weight: 300;
+        text-transform: uppercase; }
+    #daftar .row .col-50 .input {
+      float: left;
+      width: 70%; }
+      #daftar .row .col-50 .input label {
+        margin-right: 30px; }
+      #daftar .row .col-50 .input input[type="text"], #daftar .row .col-50 .input input[type="number"], #daftar .row .col-50 .input input[type="email"], #daftar .row .col-50 .input input[type="password"] {
+        width: 100%;
+        padding: 10px 0;
+        line-height: 20px;
+        display: block;
+        border: none;
+        background: transparent;
+        box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2); }
+        #daftar .row .col-50 .input input[type="text"]:focus, #daftar .row .col-50 .input input[type="number"]:focus, #daftar .row .col-50 .input input[type="email"]:focus, #daftar .row .col-50 .input input[type="password"]:focus {
+          box-shadow: 0 2px 0 0 #1f88e5; }
+
 * {
   font-family: "lato", sans-serif; }
 
+#pemesanan #pendaftaran {
+  text-align: center;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  background: #fff;
+  color: #1f88e5;
+  border-bottom: 1px solid #eee; }
 #pemesanan .container {
   width: 100%;
   margin: 0 auto;
@@ -235,6 +493,70 @@ section {
               color: #999;
               font-size: 12px; }
 
+#tersedia .content-list {
+  width: 100%;
+  padding-top: 50px; }
+  #tersedia .content-list::after {
+    clear: both;
+    content: "";
+    display: block; }
+#tersedia .list-filter {
+  float: left;
+  width: 30%; }
+  #tersedia .list-filter .row-card {
+    font-family: 'lato';
+    background: #fff;
+    width: 100%;
+    border-radius: 3px;
+    margin: 10px 0;
+    padding: 20px 0px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2); }
+    #tersedia .list-filter .row-card h3 {
+      font-family: 'lato';
+      font-weight: 900;
+      text-align: left;
+      padding: 10px 20px;
+      text-transform: uppercase; }
+    #tersedia .list-filter .row-card ul {
+      list-style-type: none; }
+      #tersedia .list-filter .row-card ul li {
+        border-bottom: 1px solid #eee; }
+        #tersedia .list-filter .row-card ul li label {
+          font-weight: 300;
+          font-size: 14px;
+          text-decoration: none;
+          text-align: left;
+          font-family: 'lato';
+          display: block;
+          padding: 10px 30px; }
+          #tersedia .list-filter .row-card ul li label input[type="checkbox"] {
+            margin-right: 20px;
+            display: inline-block; }
+    #tersedia .list-filter .row-card.button {
+      padding: 10px; }
+    #tersedia .list-filter .row-card button {
+      display: block;
+      width: 100%;
+      padding: 8px;
+      border: none;
+      border-radius: 3px;
+      background: #1f88e5;
+      color: #fff; }
+#tersedia .list-card {
+  margin-top: 0;
+  float: left;
+  width: 70%; }
+  #tersedia .list-card li {
+    width: 100%; }
+
+#maskapai .list-card li {
+  width: 33.3333%;
+  float: left; }
+  #maskapai .list-card li a img {
+    display: block;
+    width: 80%;
+    margin-left: 10%; }
+
 footer {
   width: 100%;
   border-top: 1px solid #ddd;
@@ -375,16 +697,10 @@ footer {
         width: 5%; }
       #admin div.content div.view .data-table#tbjadwal .data.maskapai {
         width: 20%; }
-      #admin div.content div.view .data-table#tbjadwal .data.asal {
-        width: 12%; }
-      #admin div.content div.view .data-table#tbjadwal .data.tujuan {
-        width: 12%; }
-      #admin div.content div.view .data-table#tbjadwal .data.jam-berangkat {
-        width: 10%; }
-      #admin div.content div.view .data-table#tbjadwal .data.jam-tiba {
-        width: 10%; }
+      #admin div.content div.view .data-table#tbjadwal .data.tujuan-keberangkatan {
+        width: 24%; }
       #admin div.content div.view .data-table#tbjadwal .data.harga-tiket {
-        width: 13%; }
+        width: 24%; }
       #admin div.content div.view .data-table#tbjadwal .data.kapasitas {
         width: 10%; }
       #admin div.content div.view .data-table#tbpemesanan .data.nama {
@@ -430,10 +746,19 @@ footer {
             display: block; }
           #admin div.content div.view .data-table .card .row:hover {
             background: #f8f8f8; }
-            #admin div.content div.view .data-table .card .row:hover.bar, #admin div.content div.view .data-table .card .row:hover.habis, #admin div.content div.view .data-table .card .row:hover.header {
+            #admin div.content div.view .data-table .card .row:hover.habis {
+              background: #f8f8f8; }
+            #admin div.content div.view .data-table .card .row:hover.bar, #admin div.content div.view .data-table .card .row:hover.header {
               background: none; }
             #admin div.content div.view .data-table .card .row:hover.info {
               background: #fff; }
+          #admin div.content div.view .data-table .card .row .data.divider {
+            width: 100%;
+            text-align: center;
+            border-top: 1px solid #eee; }
+            #admin div.content div.view .data-table .card .row .data.divider p {
+              color: #777;
+              font-weight: 300; }
           #admin div.content div.view .data-table .card .row .data.full {
             width: 100%;
             text-align: center; }

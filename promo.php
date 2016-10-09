@@ -1,6 +1,10 @@
 <?php include "partials/head.php" ?>
 <?php include "partials/header.php" ?>
-<?php include "partials/jumbotron.php" ?>
+<?php
+if(!isset($_SESSION['user'])){
+    include "partials/jumbotron.php";
+}
+?>
     <section id="promo">
         <h2>Oktober SALE</h2>
         <p>Promo Terbaru bulan Oktober!</p>

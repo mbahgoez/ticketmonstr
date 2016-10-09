@@ -1,16 +1,35 @@
 <?php
     include "../../includes/koneksi.php";
     $maskapai=$_POST['maskapai'];
+    $harga = $_POST['harga'];
     $kapasitas=$_POST['kapasitas'];
     $asal=$_POST['asal'];
     $tujuan=$_POST['tujuan'];
     $rute=$_POST['asal']." ke ".$_POST['tujuan'];
     $potongan=$_POST['potongan'];
     $jumlah_tiket=$_POST['jumlah_tiket'];
+    $tgl_berangkat = $_POST['tgl_berangkat'];
+    $jam_berangkat = $_POST['jam_berangkat'];
+    $jam_tiba = $_POST['jam_tiba'];
     $keterangan=$_POST['keterangan'];
 
-    $simpan=mysql_query("insert into tbpesawat values('','$maskapai','$kapasitas','$rute','$potongan','$jumlah_tiket','','$keterangan')");
-    if($simpan)
+    $simpanpesawat=mysql_query("insert into tbpesawat values('','$maskapai','$harga','$kapasitas','$rute','$potongan','$jumlah_tiket','$jumlah_tiket','$keterangan')");
+
+
+// KodeTiket, NomorTiket, KodePesawat, Asal, Tujuan, 
+// TglBerangkat, JamBerangkat, JamTiba, HargaTiket, StatusTiket
+
+$getid = mysql_query("SELECT * FROM tbpesawat ORDER BY KodePesawat DESC LIMIT 1") or die(mysql_error());
+$kodepesawat = mysql_fetch_array($getid);
+$KodePesawat = $kodepesawat['KodePesawat'];
+
+
+for($i = 1; $i <= $jumlah_tiket; $i++){
+    $NomorTiket = "GA-".$i;
+    $simpantiket = mysql_query("INSERT INTO tbtiket VALUES('', '$NomorTiket', '$KodePesawat', '$asal', '$tujuan', '$tgl_berangkat', '$jam_berangkat', '$jam_tiba', $harga,'ready')") or die(mysql_error());
+
+}
+ if($simpanpesawat && $simpantiket)
     {
         ?>
         <script type="text/javascript">
