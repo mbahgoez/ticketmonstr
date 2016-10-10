@@ -7,22 +7,17 @@
         <ul>
             <li>
             	<a href="">
-            		<img src="image/logo-maskapai/lufthansa4.gif" alt="">
+            		<img src="image/logo-maskapai/garuda.png" alt="">
             	</a>
             </li>
             <li>
             	<a href="">
-            		<img src="image/logo-maskapai/aeromexico.gif" alt="">
+            		<img src="image/logo-maskapai/citilink.png" alt="">
             	</a>
             </li>
             <li>
             	<a href="">
-            		<img src="image/logo-maskapai/airindia2.gif" alt="">
-            	</a>
-            </li>
-            <li>
-            	<a href="">
-            		<img src="image/logo-maskapai/airfrance2.gif" alt="">
+            		<img src="image/logo-maskapai/airasia.png" alt="">
             	</a>
             </li>
             <li>
@@ -35,6 +30,7 @@
             		<img src="image/logo-maskapai/air_new_zealand_logo2.gif" alt="">
             	</a>
             </li>
+            <li><a href=""><img src="image/logo-maskapai/airfrance2.gif" alt=""></a></li>
         </ul>
 </section>
 <?php include "partials/footer.php"; ?>

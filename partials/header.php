@@ -2,7 +2,13 @@
     <div id="pendaftaran">
         <p>Anda Login sebagai pemesan! Selamat memesan tiket dan lihat promo menarik bulan ini.</p>
     </div>
-    <?php } ?>
+<?php } ?>
+
+
+<?php
+    $filename = $_SERVER['SCRIPT_FILENAME'];
+    $fname = substr($filename, 29);
+?>
  <header>
         <div class="container">
             <div class="title">
@@ -13,15 +19,35 @@
             </div>
             <div class="menu">
                 <ul>     
-                    <li class="active">
+                    <li 
+                        <?php 
+                        if($fname == "promo.php" || $fname == "index.php"){ 
+                            echo 'class="active"';
+                        } 
+                        ?> 
+                    >
                         <a href="promo.php">Promo</a>
                     </li>
                     <?php if(isset($_SESSION['user'])){ ?>
-                        <li>
+                        <li
+                            <?php 
+                            if($fname == "tersedia.php"){ 
+                                echo 'class="active"';
+                            } 
+                            ?>   
+                        >
                             <a href="tersedia.php">Tiket Tersedia</a>
                         </li>
                     <?php } ?>
-                    <li><a href="maskapai.php">Maskapai</a></li>
+                    <li
+                        <?php 
+                        if($fname == "maskapai.php"){ 
+                            echo 'class="active"';
+                        } 
+                        ?>
+                    >
+                        <a href="maskapai.php">Maskapai</a>
+                    </li>
                     <?php if(isset($_SESSION['user'])){ ?>
                         <li>
                             <a href="">Pemesanan</a>
