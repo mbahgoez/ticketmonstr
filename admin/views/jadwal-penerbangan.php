@@ -36,14 +36,16 @@
         ?>
         <div class="row item">
             <div class="check data">
-                
-                    <input type="checkbox" name="itemCheck[]" value="<?php echo $data['KodePesawat']; ?>">    
-
-                
+                <input type="checkbox" name="itemCheck[]" value="<?php echo $data['KodePesawat']; ?>">   
             </div>
-            <div class="maskapai data"><?php echo $data['TipePesawat']; ?></div>
+            <div class="maskapai data"><?php 
+                $tipe = $data['TipePesawat'];
+                $qtipe = mysql_query("SELECT * FROM tbmaskapai WHERE KodeMaskapai='$tipe'");
+                $dtipe = mysql_fetch_array($qtipe);
+                echo $dtipe['NamaMaskapai'] 
+            ?></div>
             <div class="tujuan-keberangkatan data"><?php echo $data['RutePesawat']; ?></div>
-            <div class="harga-tiket data">Rp. <?php echo $data['HargaTiket']; ?></div>
+            <div class="harga-tiket data">Rp. <?php echo number_format($data['HargaTiket'], 0, ".","."); ?></div>
             <div class="kapasitas data"><?php echo $data['Kapasitas']; ?> Seat</div>
             <div class="edit data">
                 <a href="#" title="Perbaiki item ini"><i class="ion-edit"></i></a>
@@ -110,23 +112,6 @@
     </form>  
     </div>
 </div>
-<!--          <div class="data-table">
-                <div class="card">
-                    <div class="row bar">
-                        <div class="title">
-                            <h3>Jadwal Penerbangan</h3>
-                         </div>
-                        <div class="action"></div>
-                    </div>
-                    <div class="row">
-                        <div class="data full">
-                            <h3>Tidak Ada Satupun</h3>
-                            <i class="ion-flag"></i>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-
 
 <?php 
     include "forms/jadwal-penerbangan.php";

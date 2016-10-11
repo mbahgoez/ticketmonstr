@@ -1,17 +1,24 @@
 <?php
     include "../../includes/koneksi.php";
-    $maskapai=$_POST['maskapai'];
+    
     $harga = $_POST['harga'];
-    $kapasitas=$_POST['kapasitas'];
-    $asal=$_POST['asal'];
-    $tujuan=$_POST['tujuan'];
-    $rute=$_POST['asal']." ke ".$_POST['tujuan'];
+    $kapasitas=$_POST['kapasitas'];  
     $potongan=$_POST['potongan'];
     $jumlah_tiket=$_POST['jumlah_tiket'];
     $tgl_berangkat = $_POST['tgl_berangkat'];
     $jam_berangkat = $_POST['jam_berangkat'];
     $jam_tiba = $_POST['jam_tiba'];
     $keterangan=$_POST['keterangan'];
+    $maskapai=$_POST['maskapai'];
+
+    $asal=$_POST['asal'];
+    $tujuan=$_POST['tujuan'];
+    $qasal = mysql_query("SELECT * FROM tbbandara WHERE KodeBandara='$asal'");
+    $qtujuan = mysql_query("SELECT * FROM tbbandara WHERE KodeBandara='$tujuan'"); 
+    $dasal = mysql_fetch_array($qasal);
+    $dtujuan = mysql_fetch_array($qtujuan); 
+    $rute= $dasal['Kota']." Ke ".$dtujuan['Kota'];
+  
 
     $simpanpesawat=mysql_query("insert into tbpesawat values('','$maskapai','$harga','$kapasitas','$rute','$potongan','$jumlah_tiket','$jumlah_tiket','$keterangan')");
 

@@ -13,5 +13,9 @@
             <p class="phone"><i class="ion-ios-telephone"></i>Phone: 0361-0908-8038</p>
         </div>
     </footer>
+    <?php include "forms/pencarian.php";  ?>
+    <div class="overlay"></div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

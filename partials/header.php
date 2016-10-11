@@ -28,17 +28,6 @@
                     >
                         <a href="promo.php">Promo</a>
                     </li>
-                    <?php if(isset($_SESSION['user'])){ ?>
-                        <li
-                            <?php 
-                            if($fname == "tersedia.php"){ 
-                                echo 'class="active"';
-                            } 
-                            ?>   
-                        >
-                            <a href="tersedia.php">Tiket Tersedia</a>
-                        </li>
-                    <?php } ?>
                     <li
                         <?php 
                         if($fname == "maskapai.php"){ 
@@ -75,7 +64,7 @@
                         <?php } ?>
                     
                     <li>
-                        <button title="pencarian">
+                        <button id="open-form" title="pencarian">
                             <i class="ion-ios-search"></i>
                         </button>
                     </li>

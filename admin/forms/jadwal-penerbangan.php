@@ -16,15 +16,15 @@
                     <label>Masukan maskapai</label>
                 </div>
                 <div class="input">
-                    <input type="text" list="data-maskapai" placeholder="Maskapai Penerbangan" name="maskapai">
-                    <datalist id="data-maskapai">
-                        <option value="AirAsia">
-                        <option value="Garuda Indonesia">
-                        <option value="Lion Air">
-                        <option value="Citilink">
-                        <option value="Emirates">
-                        <option value="Qantas">
-                    </datalist>
+                    <select name="maskapai" required>
+                        <option value="">Pilih Maskapai</option>
+                        <?php 
+                            $query = mysql_query("SELECT * FROM tbmaskapai ORDER BY NamaMaskapai");
+                            while($data = mysql_fetch_array($query)){ 
+                        ?>
+                        <option value="<?php echo $data['KodeMaskapai']; ?>"><?php echo $data['NamaMaskapai']; ?> (<?php echo $data['KodeMaskapai']; ?>)</option>
+                        <?php } ?>
+                    </select>
                 </div>
             </div>
             <div class="row">
@@ -32,7 +32,7 @@
                     <label>Harga</label>
                 </div>
                 <div class="input">
-                    <input type="number" placeholder="Harga" name="harga">
+                    <input type="number" placeholder="Harga" name="harga" required>
                 </div>
             </div>
             <div class="row">
@@ -40,7 +40,7 @@
                     <label>Kapasitas</label>
                 </div>
                 <div class="input">
-                    <input type="text" placeholder="Kapasitas" name="kapasitas">
+                    <input type="text" placeholder="Kapasitas" name="kapasitas" required>
                 </div>
             </div>
             <div class="row">
@@ -48,7 +48,15 @@
                     <label>Asal Penerbangan</label>
                 </div>
                 <div class="input">
-                    <input type="text" placeholder="Asal Penerbangan" name="asal">
+                    <select name="asal" required>
+                        <option value="">Pilih Bandara</option>
+                        <?php 
+                            $query = mysql_query("SELECT * FROM tbbandara ORDER BY Kota");
+                            while($data = mysql_fetch_array($query)){ 
+                        ?>
+                        <option value="<?php echo $data['KodeBandara']; ?>"><?php echo $data['Kota']; ?> (<?php echo $data['NamaBandara']; ?>)</option>
+                        <?php } ?>
+                    </select>
                 </div>
             </div>
             <div class="row">
@@ -56,7 +64,15 @@
                     <label>Tujuan Penerbangan</label>
                 </div>
                 <div class="input">
-                    <input type="text" placeholder="Tujuan Berangkat" name="tujuan">
+                     <select name="tujuan" required>
+                        <option value="">Pilih Bandara</option>
+                        <?php 
+                            $query = mysql_query("SELECT * FROM tbbandara ORDER BY Kota");
+                            while($data = mysql_fetch_array($query)){ 
+                        ?>
+                        <option value="<?php echo $data['KodeBandara']; ?>"><?php echo $data['Kota']; ?> (<?php echo $data['NamaBandara']; ?>)</option>
+                        <?php } ?>
+                    </select>
                 </div>
             </div>
             <div class="row">
@@ -64,7 +80,7 @@
                     <label>Potongan Batal</label>
                 </div>
                 <div class="input">
-                    <input type="text" placeholder="Potongan Batal" name="potongan">
+                    <input type="number" placeholder="Potongan Batal" name="potongan" required>
                 </div>
             </div>
             <div class="row">
@@ -72,7 +88,7 @@
                     <label>Jumlah Tiket</label>
                 </div>
                 <div class="input">
-                    <input type="text" placeholder="Jumlah Tiket" name="jumlah_tiket">
+                    <input type="number" placeholder="Jumlah Tiket" name="jumlah_tiket" required>
                 </div>
             </div>
             <div class="row">
@@ -80,7 +96,7 @@
                     <label>Tanggal Berangkat</label>
                 </div>
                 <div class="input">
-                    <input type="date" name="tgl_berangkat">
+                    <input type="date" name="tgl_berangkat" required>
                 </div>
             </div>
             <div class="row">

@@ -476,6 +476,7 @@ section {
                 color: #999;
                 animation: fly 3s infinite; }
               section div.list-card ul li a div.info-location div.plane p {
+                text-align: center;
                 font-size: 14px; }
             section div.list-card ul li a div.info-location div.tujuan {
               text-align: right;
@@ -520,7 +521,7 @@ section {
     #tersedia .list-filter .row-card ul {
       list-style-type: none; }
       #tersedia .list-filter .row-card ul li {
-        border-bottom: 1px solid #eee; }
+        border-bottom: 1px solid #f8f8f8; }
         #tersedia .list-filter .row-card ul li label {
           font-weight: 300;
           font-size: 14px;
@@ -529,7 +530,7 @@ section {
           font-family: 'lato';
           display: block;
           padding: 10px 30px; }
-          #tersedia .list-filter .row-card ul li label input[type="checkbox"] {
+          #tersedia .list-filter .row-card ul li label input[type="radio"] {
             margin-right: 20px;
             display: inline-block; }
     #tersedia .list-filter .row-card.button {
@@ -953,5 +954,144 @@ footer {
 
 .pull-left {
   float: left; }
+
+.dialog-form {
+  position: fixed;
+  background: #f8f8f8;
+  height: 80vh;
+  width: 50%;
+  left: 25%;
+  top: 5vh;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  z-index: 20;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all .2s ease;
+  transform: scale(0); }
+  .dialog-form.show {
+    transform: scale(1); }
+  .dialog-form div.dialog-panel {
+    background: #fff;
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+    border-bottom: 1px solid #eee; }
+    .dialog-form div.dialog-panel::after {
+      clear: both;
+      content: "";
+      display: block; }
+    .dialog-form div.dialog-panel div.title-panel {
+      float: left;
+      width: 50%;
+      padding-left: 20px; }
+      .dialog-form div.dialog-panel div.title-panel h3 {
+        text-transform: uppercase;
+        line-height: 30px;
+        color: #666;
+        letter-spacing: 1px;
+        font-size: 12px;
+        font-weight: 900; }
+    .dialog-form div.dialog-panel div.action {
+      width: 20%;
+      float: right; }
+      .dialog-form div.dialog-panel div.action::after {
+        clear: both;
+        content: "";
+        display: block; }
+      .dialog-form div.dialog-panel div.action button.btn-close {
+        line-height: 30px;
+        width: 33.3333%;
+        display: block;
+        float: right;
+        background: #fff;
+        border: none;
+        font-size: 20px;
+        border-left: 1px solid #eee;
+        color: #ddd; }
+        .dialog-form div.dialog-panel div.action button.btn-close:hover {
+          color: #aaa; }
+        .dialog-form div.dialog-panel div.action button.btn-close:focus {
+          outline: none;
+          background: #f8f8f8; }
+  .dialog-form div.dialog-content {
+    padding: 20px 40px;
+    overflow-y: scroll;
+    height: 100%; }
+    .dialog-form div.dialog-content div.row {
+      padding: 10px 0; }
+      .dialog-form div.dialog-content div.row::after {
+        clear: both;
+        content: "";
+        display: block; }
+      .dialog-form div.dialog-content div.row div.col-50 {
+        padding-right: 10px;
+        width: 50%;
+        float: left; }
+      .dialog-form div.dialog-content div.row div.label {
+        width: 30%;
+        float: left;
+        padding-top: 10px; }
+        .dialog-form div.dialog-content div.row div.label label {
+          font-size: 14px;
+          color: #777;
+          display: block;
+          font-weight: 300; }
+        .dialog-form div.dialog-content div.row div.label p {
+          font-weight: 300;
+          font-size: 12px;
+          color: #999; }
+      .dialog-form div.dialog-content div.row div.input {
+        width: 70%;
+        float: left; }
+        .dialog-form div.dialog-content div.row div.input input {
+          width: 100%;
+          padding: 10px 0;
+          line-height: 20px;
+          display: block;
+          border: none;
+          background: transparent;
+          box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2); }
+          .dialog-form div.dialog-content div.row div.input input:focus {
+            box-shadow: 0 2px 0 0 #1f88e5; }
+        .dialog-form div.dialog-content div.row div.input select {
+          width: 100%;
+          padding: 10px 0;
+          line-height: 20px;
+          display: block;
+          border: none;
+          background: transparent;
+          box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2); }
+        .dialog-form div.dialog-content div.row div.input button {
+          border: none;
+          display: block;
+          background: transparent;
+          padding: 10px 20px;
+          margin-top: 30px;
+          margin-bottom: 20px;
+          margin-left: 20px;
+          box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+          text-transform: uppercase; }
+          .dialog-form div.dialog-content div.row div.input button i {
+            margin-right: 10px; }
+          .dialog-form div.dialog-content div.row div.input button:focus {
+            outline: none; }
+          .dialog-form div.dialog-content div.row div.input button.reset {
+            background: #fff;
+            color: #1f88e5; }
+          .dialog-form div.dialog-content div.row div.input button.submit {
+            background: #1f88e5;
+            color: #fff; }
+
+.overlay {
+  background: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  display: none; }
+  .overlay.show {
+    display: block; }
 
 /*# sourceMappingURL=style.css.map */

@@ -216,6 +216,7 @@ section {
                                 animation: fly 3s infinite;
                             }
                             p {
+                                text-align:center;
                                 font-size: 14px;
                             }
                         }
@@ -272,7 +273,7 @@ section {
             ul {
                 list-style-type: none;
                 li {
-                    border-bottom: 1px solid #eee;
+                    border-bottom: 1px solid #f8f8f8;
                     label {
                         font-weight: 300;
                         font-size: 14px;
@@ -281,7 +282,7 @@ section {
                         font-family: 'lato';
                         display: block;
                         padding:10px 30px;
-                        input[type="checkbox"]{
+                        input[type="radio"]{
                             margin-right: 20px;
                             display: inline-block;
                         }
