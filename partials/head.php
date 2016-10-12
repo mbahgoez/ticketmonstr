@@ -1,8 +1,9 @@
-<?php 
-	session_start();
-	include "includes/koneksi.php";
-	path_url("promo.html");
- ?>
+<?php
+
+session_start();
+include "includes/koneksi.php";
+path_url("promo.html");
+?>
 
 <!DOCTYPE html>
 <html lang="en">

@@ -1,13 +1,13 @@
- <?php if(isset($_SESSION['user'])){ ?>
+ <?php if (isset($_SESSION['user'])) {?>
     <div id="pendaftaran">
         <p>Anda Login sebagai pemesan! Selamat memesan tiket dan lihat promo menarik bulan ini.</p>
     </div>
-<?php } ?>
+<?php }?>
 
 
 <?php
-    $filename = $_SERVER['SCRIPT_FILENAME'];
-    $fname = substr($filename, 29);
+$filename = $_SERVER['SCRIPT_FILENAME'];
+$fname = substr($filename, 29);
 ?>
  <header>
         <div class="container">
@@ -18,34 +18,33 @@
 				</h1>
             </div>
             <div class="menu">
-                <ul>     
-                    <li 
-                        <?php 
-                        if($fname == "promo.php" || $fname == "index.php"){ 
-                            echo 'class="active"';
-                        } 
-                        ?> 
+                <ul>
+                    <li
+                        <?php
+
+if ($fname == "promo.php" || $fname == "index.php") {
+    echo 'class="active"';
+}
+?>
                     >
                         <a href="promo.php">Promo</a>
                     </li>
                     <li
-                        <?php 
-                        if($fname == "maskapai.php"){ 
-                            echo 'class="active"';
-                        } 
-                        ?>
+<?php if ($fname == "maskapai.php") {
+    echo 'class="active"';
+}?>
                     >
                         <a href="maskapai.php">Maskapai</a>
                     </li>
-                    <?php if(isset($_SESSION['user'])){ ?>
+                    <?php if (isset($_SESSION['user'])) {?>
                         <li>
                             <a href="">Pemesanan</a>
                         </li>
                         <li>
                             <a href="">Tiket</a>
                         </li>
-                    <?php } ?>
-                    <?php if(!isset($_SESSION['user'])){ ?>
+                    <?php }?>
+                    <?php if (!isset($_SESSION['user'])) {?>
                     <li>
                         <a href="">
                         	Cara Memesan
@@ -54,15 +53,15 @@
                     <li>
                         <a href="">Syarat</a>
                     </li>
-                    <?php } ?>
-                    <?php if(isset($_SESSION['user'])){ ?>                
+                    <?php }?>
+                    <?php if (isset($_SESSION['user'])) {?>
                         <li>
                             <a href="logout.php" title="Keluar">
-                                <i class="ion-power"></i>  
+                                <i class="ion-power"></i>
                             </a>
                         </li>
-                        <?php } ?>
-                    
+                    <?php }?>
+
                     <li>
                         <button id="open-form" title="pencarian">
                             <i class="ion-ios-search"></i>

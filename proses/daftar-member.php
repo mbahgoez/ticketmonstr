@@ -1,9 +1,6 @@
 <?php
 include "../includes/koneksi.php";
 
-// Array ( [username] => bagoes48 [password] => idjedjef [email] => bagus.mantonafi@gmail.com [jk] => Laki-laki [re-password] => frfrf [umur] => 17 [pekerjaan] => pelajar [provinsi] => bali [kota] => denpasar [alamat] => jl pulau saelus [no-telephone] => 089656557453 [no-hp] => 089656557453 );
-
-
 $username = $_POST['username'];
 $nama_lengkap = $_POST['nama-lengkap'];
 $password = $_POST['password'];
@@ -24,6 +21,6 @@ $sql .= "VALUES('','$username', '$password', '$nama_lengkap', '$jk', '$umur', '$
 
 $query = mysql_query($sql) or die(mysql_error());
 
-if($query){
-	header("Location:http://".$_SERVER['SERVER_NAME']."/ticketmonstr/login.php?status=terdaftar");
+if ($query) {
+    header("Location:http://" . $_SERVER['SERVER_NAME'] . "/ticketmonstr/login.php?status=terdaftar");
 }

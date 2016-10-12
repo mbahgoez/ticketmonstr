@@ -2,16 +2,34 @@
     font-family: $lato;
 }
 
+.cart {
+    width: 70px;
+    height: 70px;
+    background: $main;
+    color: #fff;
+    display: block;
+    border-radius: 50%;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.3);
+    position: fixed;
+    bottom:10px;
+    right:10px;
+    i {
+        display: block;
+        line-height: 70px;
+        text-align: center;
+        font-size: 30px;
+    }
+}
+
 #pemesanan {
     #pendaftaran {
         text-align: center;
-        box-shadow: 0 1px 2px 0 rgba(0,0,0, 0.2);
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
         padding: 10px 0;
         background: #fff;
-        color:$main;
+        color: $main;
         border-bottom: 1px solid #eee;
     }
-
     .container {
         width: 100%;
         margin: 0 auto;
@@ -135,7 +153,6 @@
     }
 }
 
-
 section {
     text-align: center;
     padding: 20px;
@@ -216,7 +233,7 @@ section {
                                 animation: fly 3s infinite;
                             }
                             p {
-                                text-align:center;
+                                text-align: center;
                                 font-size: 14px;
                             }
                         }
@@ -245,29 +262,29 @@ section {
         }
     }
 }
+
 #tersedia {
     .content-list {
-        width:100%;
+        width: 100%;
         @include clearfix;
-        padding-top:50px;
+        padding-top: 50px;
     }
-    
     .list-filter {
-        float:left;
+        float: left;
         width: 30%;
         .row-card {
             font-family: 'lato';
             background: #fff;
             width: 100%;
             border-radius: 3px;
-            margin:10px 0;
-            padding:20px 0px;
-            box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2);
+            margin: 10px 0;
+            padding: 20px 0px;
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
             h3 {
                 font-family: 'lato';
                 font-weight: 900;
                 text-align: left;
-                padding:10px 20px;
+                padding: 10px 20px;
                 text-transform: uppercase;
             }
             ul {
@@ -281,8 +298,8 @@ section {
                         text-align: left;
                         font-family: 'lato';
                         display: block;
-                        padding:10px 30px;
-                        input[type="radio"]{
+                        padding: 10px 30px;
+                        input[type="radio"] {
                             margin-right: 20px;
                             display: inline-block;
                         }
@@ -290,38 +307,39 @@ section {
                 }
             }
             &.button {
-                padding:10px;
+                padding: 10px;
             }
             button {
                 display: block;
                 width: 100%;
-                padding:8px;
-                border:none;
+                padding: 8px;
+                border: none;
                 border-radius: 3px;
                 background: $main;
-                color:#fff;
+                color: #fff;
             }
         }
     }
     .list-card {
         margin-top: 0;
-        float:left;
+        float: left;
         width: 70%;
         li {
             width: 100%;
         }
     }
 }
+
 #maskapai {
     .list-card {
         li {
-            width:33.3333%;
-            float:left;
+            width: 33.3333%;
+            float: left;
             a {
                 img {
                     display: block;
-                    width:80%;
-                    margin-left:10%;
+                    width: 80%;
+                    margin-left: 10%;
                 }
             }
         }
@@ -367,8 +385,8 @@ footer {
             font-size: 15px;
             letter-spacing: 1px;
             i {
-            	margin-right: 10px;
-            	display: inline-block;
+                margin-right: 10px;
+                display: inline-block;
             }
         }
     }

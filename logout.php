@@ -1,6 +1,5 @@
 <?php
-	session_start();
-	session_destroy();
+session_start();
+session_destroy();
 
-	header("Location:http://".$_SERVER['SERVER_NAME']."/ticketmonstr/");
-?>
+header("Location:http://" . $_SERVER['SERVER_NAME'] . "/ticketmonstr/");

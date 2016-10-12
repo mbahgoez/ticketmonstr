@@ -18,12 +18,12 @@
                 <div class="input">
                     <select name="maskapai" required>
                         <option value="">Pilih Maskapai</option>
-                        <?php 
-                            $query = mysql_query("SELECT * FROM tbmaskapai ORDER BY NamaMaskapai");
-                            while($data = mysql_fetch_array($query)){ 
-                        ?>
+<?php
+$query = mysql_query("SELECT * FROM tbmaskapai ORDER BY NamaMaskapai");
+while ($data = mysql_fetch_array($query)) {
+    ?>
                         <option value="<?php echo $data['KodeMaskapai']; ?>"><?php echo $data['NamaMaskapai']; ?> (<?php echo $data['KodeMaskapai']; ?>)</option>
-                        <?php } ?>
+                        <?php }?>
                     </select>
                 </div>
             </div>
@@ -50,12 +50,12 @@
                 <div class="input">
                     <select name="asal" required>
                         <option value="">Pilih Bandara</option>
-                        <?php 
-                            $query = mysql_query("SELECT * FROM tbbandara ORDER BY Kota");
-                            while($data = mysql_fetch_array($query)){ 
-                        ?>
+<?php
+$query = mysql_query("SELECT * FROM tbbandara ORDER BY Kota");
+while ($data = mysql_fetch_array($query)) {
+    ?>
                         <option value="<?php echo $data['KodeBandara']; ?>"><?php echo $data['Kota']; ?> (<?php echo $data['NamaBandara']; ?>)</option>
-                        <?php } ?>
+                        <?php }?>
                     </select>
                 </div>
             </div>
@@ -66,12 +66,12 @@
                 <div class="input">
                      <select name="tujuan" required>
                         <option value="">Pilih Bandara</option>
-                        <?php 
-                            $query = mysql_query("SELECT * FROM tbbandara ORDER BY Kota");
-                            while($data = mysql_fetch_array($query)){ 
-                        ?>
+<?php
+$query = mysql_query("SELECT * FROM tbbandara ORDER BY Kota");
+while ($data = mysql_fetch_array($query)) {
+    ?>
                         <option value="<?php echo $data['KodeBandara']; ?>"><?php echo $data['Kota']; ?> (<?php echo $data['NamaBandara']; ?>)</option>
-                        <?php } ?>
+                        <?php }?>
                     </select>
                 </div>
             </div>
@@ -109,7 +109,7 @@
                         <label>Jam Berangkat</label>
                         <input type="text" placeholder="00:00" name="jam_berangkat">
                     </div>
-                    
+
                     <div class="col-50" style="width:50%;float:left">
                         <p>Jam Tiba</p>
                         <input type="text" placeholder="00:00" name="jam_tiba">

@@ -1,7 +1,7 @@
-<?php include "partials/head.php" ?>
-<?php include "partials/header.php" ?>
+<?php include "partials/head.php";?>
+<?php include "partials/header.php";?>
 <?php
-if(!isset($_SESSION['user'])){
+if (!isset($_SESSION['user'])) {
     include "partials/jumbotron.php";
 }
 ?>
@@ -173,4 +173,4 @@ if(!isset($_SESSION['user'])){
             </ul>
         </div>
     </section>
-<?php include "partials/footer.php" ?>
+<?php include "partials/footer.php";?>

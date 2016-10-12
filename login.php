@@ -1,8 +1,9 @@
-<?php 
-	session_start();
-	if(isset($_SESSION['user'])){
-		header("Location:index.php");
-	} 
+<?php
+
+session_start();
+if (isset($_SESSION['user'])) {
+    header("Location:index.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,11 +14,11 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body id="login">
-	<?php if(isset($_GET['status']) && $_GET['status'] == 'terdaftar'){ ?>
+	<?php if (isset($_GET['status']) && $_GET['status'] == 'terdaftar') {?>
 	<div id="pendaftaran">
 		<p>Pendaftaran Berhasil</p>
 	</div>
-	<?php } ?>
+	<?php }?>
 	<div class="container">
 		<header>
 			<h1>

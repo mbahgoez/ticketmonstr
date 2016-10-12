@@ -1,5 +1,5 @@
-<?php include "partials/head.php"; ?>
-<?php include "partials/header.php"; ?>
+<?php include "partials/head.php";?>
+<?php include "partials/header.php";?>
 <section id="maskapai">
 	<h2>Tiket Maskapai</h2>
 	<p>Penjualan Tiket yang kami layanani terdiri atas maskapai berikut ini</p>
@@ -33,4 +33,4 @@
             <li><a href=""><img src="image/logo-maskapai/airfrance2.gif" alt=""></a></li>
         </ul>
 </section>
-<?php include "partials/footer.php"; ?>
+<?php include "partials/footer.php";?>

@@ -8,7 +8,7 @@
 </head>
 <body id="daftar">
 	<header>
-			<h1>Pendaftaran Akun TicketMonstr</h1>		
+			<h1>Pendaftaran Akun TicketMonstr</h1>
 	</header>
 
 
@@ -17,7 +17,7 @@
 			<div class="row">
 				<div class="col-50">
 					<div class="label">
-						<label>USERNAME</label>	
+						<label>USERNAME</label>
 					</div>
 					<div class="input">
 						<input type="text" name="username" placeholder="Contoh : sukijan48, john.doe48, markonah96">
@@ -25,7 +25,7 @@
 				</div>
 				<div class="col-50">
 					<div class="label">
-						<label>NAMA LENGKAP</label>	
+						<label>NAMA LENGKAP</label>
 					</div>
 					<div class="input">
 						<input type="text" name="nama-lengkap" placeholder="Contoh : Sujarwo Tejo, Adit, Sopo, Jarwo.">
@@ -35,7 +35,7 @@
 			<div class="row">
 				<div class="col-50">
 					<div class="label">
-						<label>E-mail</label>	
+						<label>E-mail</label>
 					</div>
 					<div class="input">
 						<input type="text" name="email" placeholder="Contoh : emailanda@email.com">
@@ -43,7 +43,7 @@
 				</div>
 				<div class="col-50">
 					<div class="label">
-						<label>Jenis Kelamin</label>	
+						<label>Jenis Kelamin</label>
 					</div>
 					<div class="input">
 						<label>
@@ -60,7 +60,7 @@
 			<div class="row">
 				<div class="col-50">
 					<div class="label">
-						<label>Password</label>	
+						<label>Password</label>
 					</div>
 					<div class="input">
 						<input type="password" name="password" placeholder="Kombinasikan huruf besar kecil dan angka">
@@ -68,18 +68,18 @@
 				</div>
 				<div class="col-50">
 					<div class="label">
-						<label>Re-Password</label>	
+						<label>Re-Password</label>
 					</div>
 					<div class="input">
 						<input type="password" name="re-password" placeholder="Kombinasikan huruf besar kecil dan angka">
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="row">
 				<div class="col-50">
 					<div class="label">
-						<label>umur</label>	
+						<label>umur</label>
 					</div>
 					<div class="input">
 						<input type="number" name="umur" placeholder="Masukan Umur saat ini">
@@ -87,7 +87,7 @@
 				</div>
 				<div class="col-50">
 					<div class="label">
-						<label>pekerjaan</label>	
+						<label>pekerjaan</label>
 					</div>
 					<div class="input">
 						<input type="text" name="pekerjaan" placeholder="Contoh : Wirawasta, Pegawai, PNS, Petani, Nelayan, Pelajar Dsb.">
@@ -98,7 +98,7 @@
 			<div class="row">
 				<div class="col-50">
 					<div class="label">
-						<label>Provinsi</label>	
+						<label>Provinsi</label>
 					</div>
 					<div class="input">
 						<input type="text" name="provinsi" placeholder="Kombinasikan huruf besar kecil dan angka">
@@ -106,7 +106,7 @@
 				</div>
 				<div class="col-50">
 					<div class="label">
-						<label>kota</label>	
+						<label>kota</label>
 					</div>
 					<div class="input">
 						<input type="text" name="kota" placeholder="Kombinasikan huruf besar kecil dan angka">
@@ -116,7 +116,7 @@
 			<div class="row">
 				<div class="col-50">
 					<div class="label">
-						<label>alamat</label>	
+						<label>alamat</label>
 					</div>
 					<div class="input">
 						<input type="text" name="alamat" placeholder="Kombinasikan huruf besar kecil dan angka">
@@ -126,7 +126,7 @@
 			<div class="row">
 				<div class="col-50">
 					<div class="label">
-						<label>No Telephone</label>	
+						<label>No Telephone</label>
 					</div>
 					<div class="input">
 						<input type="number" name="no-telephone" placeholder="Kombinasikan huruf besar kecil dan angka">
@@ -134,7 +134,7 @@
 				</div>
 				<div class="col-50">
 					<div class="label">
-						<label>No HP</label>	
+						<label>No HP</label>
 					</div>
 					<div class="input">
 						<input type="number" name="no-hp" placeholder="Kombinasikan huruf besar kecil dan angka">

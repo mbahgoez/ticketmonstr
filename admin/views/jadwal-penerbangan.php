@@ -29,23 +29,25 @@
             <div class="edit data"></div>
         </div>
 
-        <?php 
-            $query = mysql_query("SELECT * FROM tbpesawat ORDER BY KodePesawat DESC");
-            if(mysql_num_rows($query) > 0){
-            while($data = mysql_fetch_array($query)){ 
+        <?php
+
+$query = mysql_query("SELECT * FROM tbpesawat ORDER BY KodePesawat DESC");
+if (mysql_num_rows($query) > 0) {
+    while ($data = mysql_fetch_array($query)) {
         ?>
         <div class="row item">
             <div class="check data">
-                <input type="checkbox" name="itemCheck[]" value="<?php echo $data['KodePesawat']; ?>">   
+                <input type="checkbox" name="itemCheck[]" value="<?php echo $data['KodePesawat']; ?>">
             </div>
-            <div class="maskapai data"><?php 
-                $tipe = $data['TipePesawat'];
-                $qtipe = mysql_query("SELECT * FROM tbmaskapai WHERE KodeMaskapai='$tipe'");
-                $dtipe = mysql_fetch_array($qtipe);
-                echo $dtipe['NamaMaskapai'] 
-            ?></div>
+            <div class="maskapai data"><?php
+
+        $tipe = $data['TipePesawat'];
+        $qtipe = mysql_query("SELECT * FROM tbmaskapai WHERE KodeMaskapai='$tipe'");
+        $dtipe = mysql_fetch_array($qtipe);
+        echo $dtipe['NamaMaskapai']
+        ;?></div>
             <div class="tujuan-keberangkatan data"><?php echo $data['RutePesawat']; ?></div>
-            <div class="harga-tiket data">Rp. <?php echo number_format($data['HargaTiket'], 0, ".","."); ?></div>
+            <div class="harga-tiket data">Rp. <?php echo number_format($data['HargaTiket'], 0, ".", "."); ?></div>
             <div class="kapasitas data"><?php echo $data['Kapasitas']; ?> Seat</div>
             <div class="edit data">
                 <a href="#" title="Perbaiki item ini"><i class="ion-edit"></i></a>
@@ -53,51 +55,52 @@
 
             <div class="data divider">
                 <?php
-                    $id = $data['KodePesawat']; 
-                    $sql = mysql_query("SELECT DISTINCT TglBerangkat, JamBerangkat, JamTiba FROM tbtiket WHERE KodePesawat='$id' LIMIT 1");
-                    while($infotiket = mysql_fetch_array($sql)){
-                        $tgl_berangkat = $infotiket['TglBerangkat'];
-                        $jam_tiba = $infotiket['JamTiba'];
-                        $jam_berangkat = $infotiket['JamBerangkat'];   
-                    } 
-                    $strtgl = strtotime($tgl_berangkat);
-                    $d = date('d', $strtgl);
-                    $m = date('m', $strtgl);
-                    $y = date('Y', $strtgl);
-                    
-                    if($m == 1){
-                        $mstr = "Januari";
-                    } else if($m == 2){
-                        $mstr = "Februari";
-                    } else if($m == 3){
-                        $mstr = "Maret";
-                    } else if($m == 4){
-                        $mstr = "April";
-                    } else if($m == 5){
-                        $mstr = "Mei";
-                    } else if($m == 6){
-                        $mstr = "Juni";
-                    } else if($m == 7){
-                        $mstr = "Juli";
-                    } else if($m == 8){
-                        $mstr = "Agustus";
-                    } else if($m == 9){
-                        $mstr = "September";
-                    } else if($m == 10){
-                        $mstr = "Oktober";
-                    } else if($m == 11){
-                        $mstr = "November";
-                    } else if($m == 12){
-                        $mstr = "Desember";
-                    }
-                    
-                ?>
-                <p>Berangkat <?php echo $d." ".$mstr." ".$y; ?>. Pukul <?php echo $jam_berangkat." - ".$jam_tiba; ?></p>
+$id = $data['KodePesawat'];
+        $sql = mysql_query("SELECT DISTINCT TglBerangkat, JamBerangkat, JamTiba FROM tbtiket WHERE KodePesawat='$id' LIMIT 1");
+        while ($infotiket = mysql_fetch_array($sql)) {
+            $tgl_berangkat = $infotiket['TglBerangkat'];
+            $jam_tiba = $infotiket['JamTiba'];
+            $jam_berangkat = $infotiket['JamBerangkat'];
+        }
+        $strtgl = strtotime($tgl_berangkat);
+        $d = date('d', $strtgl);
+        $m = date('m', $strtgl);
+        $y = date('Y', $strtgl);
+
+        if ($m == 1) {
+            $mstr = "Januari";
+        } else if ($m == 2) {
+            $mstr = "Februari";
+        } else if ($m == 3) {
+            $mstr = "Maret";
+        } else if ($m == 4) {
+            $mstr = "April";
+        } else if ($m == 5) {
+            $mstr = "Mei";
+        } else if ($m == 6) {
+            $mstr = "Juni";
+        } else if ($m == 7) {
+            $mstr = "Juli";
+        } else if ($m == 8) {
+            $mstr = "Agustus";
+        } else if ($m == 9) {
+            $mstr = "September";
+        } else if ($m == 10) {
+            $mstr = "Oktober";
+        } else if ($m == 11) {
+            $mstr = "November";
+        } else if ($m == 12) {
+            $mstr = "Desember";
+        }
+
+        ?>
+                <p>Berangkat <?php echo $d . " " . $mstr . " " . $y; ?>. Pukul <?php echo $jam_berangkat . " - " . $jam_tiba; ?></p>
             </div>
         </div>
-        <?php 
-        } 
-            }  else { ?>
+        <?php
+
+    }
+} else {?>
             <div class="row">
                 <div class="data full">
                     <h3>Tidak Ada Satupun</h3>
@@ -105,15 +108,16 @@
                 </div>
             </div>
             <?php
-            }
-            ?>
-        
-     
-    </form>  
+}
+?>
+
+
+    </form>
     </div>
 </div>
 
-<?php 
-    include "forms/jadwal-penerbangan.php";
+<?php
+
+include "forms/jadwal-penerbangan.php";
 ?>
 
