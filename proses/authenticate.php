@@ -1,16 +1,17 @@
 <?php 
+error_reporting(E_ALL);
 include "../includes/koneksi.php";
 session_start();
 
 $username = $_POST['username'];
-$password = $_POST['password'];
+$password = mysql_real_escape_string($_POST['password']);
+$password = md5 ($password);
 
 
 $sql = "SELECT * FROM tbuser WHERE Username='$username' AND Password='$password'";
+$query = mysql_query($sql) or die(mysql_error());
 
-$query = mysql_query($sql);
-
-if($query > 0){
+if(mysql_num_rows($query) > 0){
 	$data = mysql_fetch_array($query);
 	$_SESSION['user'] = $data['Username'];
 	$_SESSION['level'] = $data['LevelUser'];
@@ -21,4 +22,6 @@ if($query > 0){
 	} else if($_SESSION['level'] == 'admin'){
 		header("Location:http://".$_SERVER['SERVER_NAME']."ticketmonstr/admin");
 	}
+} else{
+	header("Location:http://".$_SERVER['SERVER_NAME']."/ticketmonstr/login.php?status=salah");
 }

@@ -9,6 +9,6 @@
             <a href="login.php">LOGIN <i class="ion-log-in"></i></a>
         </div>
         <div class="center"><span>atau</span></div>
-        <div class="column-2"><a class="daftar" href="">DAFTAR <i class="ion-log-out"></i></a></div>
+        <div class="column-2"><a class="daftar" href="daftar.php">DAFTAR <i class="ion-log-out"></i></a></div>
     </div>
 </div>
