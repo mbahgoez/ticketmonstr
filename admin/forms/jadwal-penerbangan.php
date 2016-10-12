@@ -29,10 +29,26 @@
             </div>
             <div class="row">
                 <div class="label">
-                    <label>Harga</label>
+                    <label>Harga Eksekutif</label>
                 </div>
                 <div class="input">
-                    <input type="number" placeholder="Harga" name="harga" required>
+                    <input type="number" placeholder="Harga" name="harga_eksekutif" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="label">
+                    <label>Harga Bisnis</label>
+                </div>
+                <div class="input">
+                    <input type="number" placeholder="Harga" name="harga_bisnis" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="label">
+                    <label>Harga Ekonomi</label>
+                </div>
+                <div class="input">
+                    <input type="number" placeholder="Harga" name="harga_ekonomi" required>
                 </div>
             </div>
             <div class="row">

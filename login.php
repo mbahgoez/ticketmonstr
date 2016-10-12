@@ -44,9 +44,12 @@
 				<h2>Masuk sebagai member!</h2>
 				<p>TicketMonstr Membership Login</p>
 				<form action="proses/authenticate.php" method="POST">
-					<input type="text" name="username" placeholder="Masukan username disini!">
-					<input type="password" name="password" placeholder="Masukan password disini!">
+					<input type="text" name="username" placeholder="Masukan username disini!" required="required">
+					<input type="password" name="password" placeholder="Masukan password disini!" required="required">
 					<button>MASUK SEBAGAI MEMBER</button>
+					<?php if(isset($_GET['status']) && $_GET['status']=="salah"){ ?>
+					<p style="color: red;">Username dan Password yang anda masukan salah !</p>
+					<?php } ?>
 				</form>
 			</section>
 		</div>
