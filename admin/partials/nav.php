@@ -30,6 +30,11 @@
             )
         ),
         "tiket" => array(
+            "daftar-tiket"=> array(
+                'url' => '?page=daftar-tiket',
+                'title' => 'Daftar Tiket',
+                'icon' => 'ion-pricetags'
+            ),
             "tiket-terjual" => array(
                 "url"=>"?page=tiket-terjual",
                 "title"=>"Tiket Terjual",

@@ -4,6 +4,7 @@ session_start();
 print_r($_SESSION);
 
 $user = $_SESSION['KodeUser'];
+
 $tanggal = date("Y-m-d");
 $jam = date("h:i");
 $sql = "INSERT INTO tbpemesanan VALUES('', '$user', '$tanggal', '$jam', '', 'Belum Lunas')";
@@ -30,7 +31,7 @@ foreach ($tiket as $val) {
     $qcurrentdetail = mysql_query("SELECT * FROM detailpemesanan ORDER BY KodeTiket DESC LIMIT 1") or die(mysql_error());
     $dcurrentdetail = mysql_fetch_array($qcurrentdetail);
 
-    $upatestatus = mysql_query("UPDATE tbtiket SET StatusTiket='dipesan' WHERE KodeTiket='$KodeTiket'");
+    $upatestatus = mysql_query("UPDATE tbtiket SET StatusTiket='dipesan' WHERE KodeTiket='$KodeTiket'") or die(mysql_error());
 }
 
 $total = mysql_query("SELECT SUM(harga) FROM detailpemesanan WHERE KodePemesanan='$idcurrent'") or die(mysql_error());

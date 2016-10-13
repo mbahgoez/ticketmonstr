@@ -4,6 +4,10 @@
 	box-sizing:border-box;
 	font-family: $segoe;
 }
+html {
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+}
 body {
 	background: #f8f8f8;
 }

@@ -3,7 +3,8 @@ include "../includes/koneksi.php";
 
 $username = $_POST['username'];
 $nama_lengkap = $_POST['nama-lengkap'];
-$password = $_POST['password'];
+$password = mysql_real_escape_string($_POST['password']);
+$password= md5($password);
 $email = $_POST['email'];
 $jk = $_POST['jk'];
 $re_password = $_POST['re-password'];

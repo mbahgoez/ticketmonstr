@@ -47,7 +47,9 @@ if (mysql_num_rows($query) > 0) {
         echo $dtipe['NamaMaskapai']
         ;?></div>
             <div class="tujuan-keberangkatan data"><?php echo $data['RutePesawat']; ?></div>
-            <div class="harga-tiket data">Rp. <?php echo number_format($data['HargaTiket'], 0, ".", "."); ?></div>
+            <div class="harga-tiket data"><b>Eksekutif</b> <br> Rp. <?php echo number_format($data['HargaEksekutif'], 0, ".", "."); ?><br><br><b>Bisnis</b> <br> Rp. <?php echo number_format($data['HargaBisnis'], 0, ".", "."); ?><br><br>
+            <b>Ekonomi</b> <br> Rp. <?php echo number_format($data['HargaEkonomi'], 0, ".", "."); ?><br>
+            </div>
             <div class="kapasitas data"><?php echo $data['Kapasitas']; ?> Seat</div>
             <div class="edit data">
                 <a href="#" title="Perbaiki item ini"><i class="ion-edit"></i></a>
