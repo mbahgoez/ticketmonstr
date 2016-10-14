@@ -1,0 +1,16 @@
+@mixin clearfix {
+    &::after {
+        clear: both;
+        content: "";
+        display: block;
+    }
+}
+@mixin setbgcolor($bg, $color) {
+	background:$bg;
+	color:$color;
+	&.outline {
+		background: transparent;
+		border:1px solid $bg;
+		color:$bg;
+	}
+}

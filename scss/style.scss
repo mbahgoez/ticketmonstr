@@ -1,9 +1,272 @@
 /* Created by Bagus Mantonafi & Adimas Putra Istiawan */
 
 @import "variables";
+@import "mixin";
+@import "component";
 @import "responsive";
 @import "reset";
 @import "login";
+@import "konfirmasi";
 @import "daftar";
 @import "user";
 @import "admin";
+
+
+* {
+	font-family:'Open Sans', sans-serif;
+	box-sizing:border-box;
+}
+html {
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+}
+body {
+	background:#f8f8f8;
+	padding:0;
+	margin:0;
+}
+hr {
+	border:none;
+	border-bottom:1px solid #eee;
+	margin:20px 0;
+}
+.btn {
+	@include button;
+	font-weight: 600;
+	letter-spacing: 1px;
+	font-size:14px;
+	&.basic {
+		@include button-basic;
+		&.bg-blue {
+			@include setbgcolor($sblue, #fff);
+		}
+		&.bg-red {
+			@include setbgcolor($red, #fff);
+		}
+		&.bg-green {
+			@include setbgcolor($green, #fff);
+		}
+	}
+	&.round {
+		@include button-round;
+		&.bg-blue {
+			@include setbgcolor($sblue, #fff);
+		}
+		&.bg-red {
+			@include setbgcolor($red, #fff);
+		}
+		&.bg-green {
+			@include setbgcolor($green, #fff);
+		}
+	}
+}
+
+// Grid System 
+.container {
+	width:100%;
+	.row {
+		width:100%;
+		@include clearfix;
+		.colpush-12 {
+			@include colpush(12);
+		}
+		.colpush-11 {
+			@include colpush(11);
+		}
+		.colpush-10 {
+			@include colpush(10);
+		}
+		.colpush-9 {
+			@include colpush(9);
+		}
+		.colpush-8 {
+			@include colpush(8);
+		}
+		.colpush-7 {
+			@include colpush(7);
+		}
+		.colpush-6 {
+			@include colpush(6);
+		}
+		.colpush-5 {
+			@include colpush(5);
+		}
+		.colpush-4 {
+			@include colpush(4);
+		}
+		.colpush-3 {
+			@include colpush(3);
+		}
+		.colpush-2 {
+			@include colpush(2);
+		}
+		.colpush-1 {
+			@include colpush(1);
+		}
+
+
+		.col-12 {
+			@include col(12);
+		}
+		.col-11 {
+			@include col(11);
+		}
+		.col-10 {
+			@include col(10);
+		}
+		.col-9 {
+			@include col(9);
+		}
+		.col-8 {
+			@include col(8);
+		}
+		.col-7 {
+			@include col(7);
+		}
+		.col-6 {
+			@include col(6);
+		}
+		.col-5 {
+			@include col(5);
+		}
+		.col-4 {
+			@include col(4);
+		}
+		.col-3 {
+			@include col(3);
+		}
+		.col-2 {
+			@include col(2);
+		}
+		.col-1 {
+			@include col(1);
+		}
+
+	}
+}
+
+.input {
+	width: 100%;
+	display: block;
+	border:1px solid #eee;
+
+}
+.input-icon {
+	@include input-icon;
+}
+
+.bar {
+	background:#2D3342;
+	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.5);
+	@include clearfix;
+	header {
+		width:15%;
+		float:left;
+		h1 {
+			text-align: center;
+			margin:0;
+			color:#fff;
+			font-size: 20px;
+			line-height: 55px;
+			i {
+				margin-right:10px;
+				line-height: 20px;
+				display: inline-block;
+				font-size:30px;
+			}
+		}
+	}
+	nav {
+		width:85%;
+		float:left;
+		@include clearfix;
+		ul {
+			margin:0;
+			&.menu-left {
+				float:left;
+			}
+			&.menu-right {
+				float:right;
+				.round {
+					margin:0 5px;
+					padding:8px 35px;
+					i {
+						margin-right:5px;
+					}
+				}
+			}
+			li {
+				display: inline-block;
+				&.active {
+					a {
+						background: lighten(#2D3342, 5%);
+					}
+				}
+				a {
+					display: block;
+					font-weight: 500;
+					color:#fff;
+					padding:14px 30px;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+
+.text-center {
+	text-align: center;
+}
+.text-left {
+	text-align: left;
+}
+.text-right {
+	text-align: right;
+}
+.text-justify {
+	text-align: justify;
+}
+.pull-left {
+	float:left;
+}
+.pull-right {
+	float:right;
+}
+
+
+		#nota {
+
+
+		*{
+			box-sizing: border-box;
+			font-size: 18px;
+			font-family: Times New Roman;
+		}
+		body{
+			background-color: #f8f8f8;
+		}
+		.margin{
+			background-color: #fff;
+			width: 80%;
+			margin: 20px auto;
+			box-shadow: 0 1px 1px 0 #ccc;
+			padding: 40px 60px;
+		}
+		table{
+			width: 100%;
+			border-collapse: collapse;
+		}
+		td:first-child {
+			width: 30%;
+		}
+		td{
+			padding: 10px;
+		}
+		h4{
+			font-size: 25px;
+		}
+		h1{
+			font-size: 30px;
+		}
+		}

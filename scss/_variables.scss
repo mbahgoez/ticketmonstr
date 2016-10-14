@@ -36,10 +36,13 @@ $blue2:#326EA7;
 $main:#1f88e5;
 // $main:#FEB528;
 $bgerror:#fff2f2;
-@mixin clearfix {
-    &::after {
-        clear: both;
-        content: "";
-        display: block;
-    }
-}
+
+
+
+// Color
+$red:#E74324;
+$pblue: #2490C6; 
+$sblue:#099FFC;
+$pblack:#3B4F59;
+$green:#1BC26B;
+$bggrey:#F9F9F9;
