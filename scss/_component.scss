@@ -1,0 +1,87 @@
+// Button
+@mixin button {
+	border:none;
+	padding:10px 40px;
+	display:inline-block;
+	text-decoration:none;
+	&:focus {
+		outline: none;
+	}
+}
+@mixin button-basic {
+	border-radius: 4px;
+	border:none;
+}
+@mixin button-round {
+	border-radius: 25px;
+}
+
+// Column 
+@mixin col($col){
+	width:100% / 12 * $col;
+	min-height:1px;
+	float:left;
+}
+@mixin colpush($col){
+	position:relative;
+	min-height:1px;
+	left:100% / 12 * $col;
+}
+// Card
+// Input text, pass, textarea
+
+@mixin input-icon {
+	display:block;
+	margin:15px 0;
+	box-shadow:0 0 1px 0 #ccc;
+	border-radius:5px;
+	overflow:hidden;
+	@include clearfix;
+	&.wrong {
+		box-shadow:none;
+		border:1px solid $red;
+		.icon {
+			i {
+				color:$red;
+			}
+		}
+		.textfield {
+			input::-webkit-input-placeholder {
+				color:$red;
+			}
+		}
+	}
+	.icon {
+		float:left;
+		width:10%;
+		padding:0 5px;
+		i {
+			text-align: center;
+			display:block;
+			color:#ccc;
+			line-height:35px;
+		}
+	}
+	.textfield {
+		float:left;
+		width:90%;
+		input {
+			border:none;
+			width:100%;
+			line-height:35px;
+			&:focus {
+				outline:none;
+			}
+		}
+	}
+	&.underline {
+		box-shadow:0 1px 0 0 #ccc;
+		border:none;
+		border-radius: 0;
+		padding-bottom: 8px;
+		&.wrong {
+			box-shadow: 0 1px 0 0 $red;
+		}
+	}
+}
+// Text Info Style, error, succes,
